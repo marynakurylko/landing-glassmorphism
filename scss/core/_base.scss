@@ -1,0 +1,62 @@
+@use "variables" as v;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: v.$font-primary;
+  background: v.$color-bg-light;
+  color: v.$color-text-dark;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Buttons with glow effect */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: v.$radius;
+  transition: v.$transition;
+  background: v.$gradient-primary;
+  color: v.$color-text-light;
+
+  &:hover {
+    box-shadow: 0 0 15px rgba(155, 92, 255, 0.8),
+      0 0 30px rgba(255, 79, 129, 0.6);
+    transform: scale(1.05);
+  }
+}
+
+.btn--accent {
+  background: v.$gradient-accent;
+
+  &:hover {
+    box-shadow: 0 0 20px #ff4f81, 0 0 40px #ff8a00;
+  }
+}

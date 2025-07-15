@@ -1,0 +1,19 @@
+@mixin respond($device) {
+  @if $device == mobile {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin glass($blur: 12px, $bg: rgba(255, 255, 255, 0.1)) {
+  background: $bg;
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+}

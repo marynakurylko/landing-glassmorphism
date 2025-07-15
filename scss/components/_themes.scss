@@ -1,0 +1,25 @@
+@use "../core" as c;
+
+[data-theme="dark"] {
+  body {
+    background: c.$color-bg-dark;
+    color: c.$color-text-light;
+  }
+
+  .header {
+    background: rgba(18, 18, 18, 0.85);
+  }
+
+  .services {
+    background: #1e1e1e;
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      color: c.$color-text-light;
+    }
+  }
+
+  .cta {
+    background: c.$gradient-primary;
+  }
+}

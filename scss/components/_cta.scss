@@ -1,0 +1,23 @@
+@use "../core" as c;
+
+.cta {
+  background: c.$gradient-accent;
+  color: c.$color-text-light;
+  text-align: center;
+  padding: c.$spacing-lg c.$spacing-md;
+
+  .cta__title {
+    font-size: 2.5rem;
+    margin-bottom: c.$spacing-sm;
+
+    span {
+      color: #fff;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  .cta__text {
+    margin-bottom: c.$spacing-md;
+    font-size: 1.25rem;
+  }
+}

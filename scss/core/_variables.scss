@@ -1,0 +1,26 @@
+/* Variables */
+$color-primary: #9b5cff;
+$color-secondary: #6c63ff;
+$color-accent: #ff4f81;
+$color-bg-light: #f8f9fa;
+$color-bg-dark: #121212;
+$color-text-light: #ffffff;
+$color-text-dark: #1a1a1a;
+
+$gradient-primary: linear-gradient(135deg, #9b5cff, #6c63ff);
+$gradient-accent: linear-gradient(135deg, #ff4f81, #ff8a00);
+
+$font-primary: "Poppins", sans-serif;
+
+$shadow-card: 0 8px 32px rgba(0, 0, 0, 0.25);
+$shadow-glow: 0 0 15px rgba(155, 92, 255, 0.8);
+
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 4rem;
+
+$radius: 12px;
+$transition: all 0.3s ease;
+
+$breakpoint-mobile: 768px;

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Glassmorphism Landing</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body data-theme="light">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header__container">
+        <!-- Logo -->
+        <div class="header__logo">MyBrand</div>
+
+        <!-- Navigation -->
+        <nav class="header__nav" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link">Services</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Theme Switcher -->
+        <button id="theme-switcher" class="btn btn--outline">
+          <i class="fas fa-moon"></i>
+        </button>
+
+        <!-- Burger button -->
+        <button
+          id="burger"
+          class="burger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="floating-circle"></div>
+      <h1 class="hero__title">
+        Build Your <span class="highlight">Digital Presence</span>
+      </h1>
+      <p class="hero__subtitle">
+        Modern, responsive and minimal design for your next project.
+      </p>
+      <div class="hero__buttons">
+        <a href="#contact" class="btn btn--accent">Get Started</a>
+      </div>
+      <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="fade-in">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>
+          We create beautiful and responsive web templates to help your business
+          grow online.
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services fade-in">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">What we can offer for you</p>
+        <div class="services__grid">
+          <div class="card">
+            <h3>Responsive Design</h3>
+            <p>Your site will look great on any device.</p>
+          </div>
+          <div class="card">
+            <h3>SEO Optimization</h3>
+            <p>Boost your visibility with optimized content.</p>
+          </div>
+          <div class="card">
+            <h3>Custom Development</h3>
+            <p>Tailored solutions for your business.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta fade-in">
+      <div class="container">
+        <h2 class="cta__title">Ready to <span>Start?</span></h2>
+        <p class="cta__text">Let's create something amazing together!</p>
+        <a href="#contact" class="btn btn--accent">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact fade-in">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/yourFormID" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" class="btn btn--accent">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2025 MyBrand. All rights reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/theme.js"></script>
+  </body>
+</html>

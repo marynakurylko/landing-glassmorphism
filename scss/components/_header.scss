@@ -1,0 +1,76 @@
+@use "../core" as c;
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: c.$gradient-primary;
+  color: c.$color-text-light;
+  z-index: 1000;
+  @include c.glass(10px, rgba(255, 255, 255, 0.05));
+
+  &__container {
+    @include c.flex-center;
+    justify-content: space-between;
+    padding: c.$spacing-sm 0;
+  }
+
+  &__logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+
+  .header__nav {
+    display: flex;
+    gap: c.$spacing-sm;
+
+    .nav__list {
+      display: flex;
+      gap: c.$spacing-sm;
+
+      .nav__link {
+        font-weight: 500;
+        transition: c.$transition;
+
+        &:hover {
+          color: c.$color-accent;
+        }
+      }
+    }
+
+    @include c.respond(mobile) {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background: c.$color-bg-dark;
+      flex-direction: column;
+      padding: c.$spacing-sm;
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+    }
+  }
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  .burger__line {
+    width: 100%;
+    height: 2px;
+    background: c.$color-text-light;
+  }
+
+  @include c.respond(mobile) {
+    display: flex;
+  }
+}
