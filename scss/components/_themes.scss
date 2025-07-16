@@ -7,7 +7,9 @@
   }
 
   .header {
-    background: rgba(18, 18, 18, 0.85);
+    @include c.glass(10px, rgba(18, 18, 18, 0.05));
+    // background: rgba(18, 18, 18, 0.85);
+    color: c.$color-text-light;
   }
 
   .services {

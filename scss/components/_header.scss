@@ -5,7 +5,7 @@
   top: 0;
   width: 100%;
   background: c.$gradient-primary;
-  color: c.$color-text-light;
+  color: c.$color-text-dark;
   z-index: 1000;
   @include c.glass(10px, rgba(255, 255, 255, 0.05));
 
