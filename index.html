@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Glassmorphism Landing</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="dist/css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
@@ -59,17 +59,22 @@
 
     <!-- HERO -->
     <section class="hero">
-      <div class="floating-circle"></div>
-      <h1 class="hero__title">
-        Build Your <span class="highlight">Digital Presence</span>
-      </h1>
-      <p class="hero__subtitle">
-        Modern, responsive and minimal design for your next project.
-      </p>
-      <div class="hero__buttons">
-        <a href="#contact" class="btn btn--accent">Get Started</a>
+      <div class="hero__decor">
+        <div class="decor-circle circle-1"></div>
+        <div class="decor-circle circle-2"></div>
+        <div class="decor-circle circle-3"></div>
       </div>
-      <div class="scroll-indicator"></div>
+      <div class="hero__content">
+        <h1 class="hero__title">
+          Build Your <span class="highlight">Digital Presence</span>
+        </h1>
+        <p class="hero__subtitle">
+          Modern, responsive and minimal design for your next project.
+        </p>
+        <div class="hero__buttons">
+          <a href="#contact" class="btn btn--accent">Get Started</a>
+        </div>
+      </div>
     </section>
 
     <!-- ABOUT -->
@@ -136,8 +141,8 @@
       <p>© 2025 MyBrand. All rights reserved.</p>
     </footer>
 
-    <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -14,3 +14,12 @@ const observer = new IntersectionObserver(
 );
 
 elements.forEach((el) => observer.observe(el));
+
+const hero = document.querySelector(".hero");
+
+hero.addEventListener("mousemove", (e) => {
+  const x = e.clientX / window.innerWidth - 0.5;
+  const y = e.clientY / window.innerHeight - 0.5;
+  hero.style.setProperty("--parallax-x", `${x * 20}px`);
+  hero.style.setProperty("--parallax-y", `${y * 20}px`);
+});
