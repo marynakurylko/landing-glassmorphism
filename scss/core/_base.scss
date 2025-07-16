@@ -60,3 +60,15 @@ ul {
     box-shadow: 0 0 20px #ff4f81, 0 0 40px #ff8a00;
   }
 }
+
+// Animations
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
