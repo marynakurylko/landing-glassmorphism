@@ -57,8 +57,6 @@ ul {
   box-shadow: 0 0 20px #ff4f81, 0 0 40px #ff8a00;
 }
 
-<<<<<<< HEAD
-=======
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -70,7 +68,6 @@ ul {
   transform: translateY(0);
 }
 
->>>>>>> 3c2aec3b49d19c576f211624486c8fac81b8db12
 .header {
   position: sticky;
   top: 0;
@@ -152,15 +149,6 @@ ul {
   align-items: center;
   flex-direction: column;
   text-align: center;
-<<<<<<< HEAD
-  padding: 4rem 1rem;
-  background: linear-gradient(135deg, #9b5cff, #6c63ff);
-  color: #ffffff;
-  overflow: hidden;
-  /* Floating decorative element */
-}
-.hero .hero__title {
-=======
   overflow: hidden;
   padding: 4rem 1rem;
   background: linear-gradient(135deg, #9b5cff, #6c63ff);
@@ -174,40 +162,10 @@ ul {
   max-width: 700px;
 }
 .hero .hero__content .hero__title {
->>>>>>> 3c2aec3b49d19c576f211624486c8fac81b8db12
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
-<<<<<<< HEAD
-.hero .hero__title .highlight {
-  color: #ff4f81;
-  text-shadow: 0 0 15px rgba(255, 79, 129, 0.7);
-}
-.hero .hero__subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-}
-.hero .hero__buttons {
-  display: flex;
-  gap: 1rem;
-}
-.hero .floating-circle {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(135deg, #ff4f81, #ff8a00);
-  border-radius: 50%;
-  filter: blur(100px);
-  animation: float 10s ease-in-out infinite;
-}
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-30px);
-=======
 .hero .hero__content .hero__title .highlight {
   color: #ff4f81;
   text-shadow: 0 0 15px rgba(255, 79, 129, 0.7);
@@ -267,7 +225,6 @@ ul {
   }
   100% {
     transform: translate(50px, 50px) scale(1.1);
->>>>>>> 3c2aec3b49d19c576f211624486c8fac81b8db12
   }
 }
 

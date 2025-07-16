@@ -57,6 +57,17 @@ ul {
   box-shadow: 0 0 20px #ff4f81, 0 0 40px #ff8a00;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -138,44 +149,82 @@ ul {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  overflow: hidden;
   padding: 4rem 1rem;
   background: linear-gradient(135deg, #9b5cff, #6c63ff);
   color: #ffffff;
-  overflow: hidden;
-  /* Floating decorative element */
+  transform: translate(var(--parallax-x, 0), var(--parallax-y, 0));
+  transition: transform 0.2s ease-out;
 }
-.hero .hero__title {
+.hero .hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+.hero .hero__content .hero__title {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
-.hero .hero__title .highlight {
+.hero .hero__content .hero__title .highlight {
   color: #ff4f81;
   text-shadow: 0 0 15px rgba(255, 79, 129, 0.7);
 }
-.hero .hero__subtitle {
+.hero .hero__content .hero__subtitle {
   font-size: 1.25rem;
   margin-bottom: 2rem;
 }
-.hero .hero__buttons {
+.hero .hero__content .hero__buttons {
   display: flex;
+  justify-content: center;
   gap: 1rem;
 }
-.hero .floating-circle {
+.hero__decor {
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+.hero__decor .decor-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.6;
+  animation: floatAnim 12s ease-in-out infinite alternate;
+}
+.hero__decor .circle-1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #4fff84, #ff0008);
+  top: -100px;
+  left: -150px;
+  animation-delay: 0s;
+}
+.hero__decor .circle-2 {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, #b04fff, #d9ff00);
+  bottom: -200px;
+  right: -150px;
+  animation-delay: 3s;
+}
+.hero__decor .circle-3 {
   width: 300px;
   height: 300px;
-  background: linear-gradient(135deg, #ff4f81, #ff8a00);
-  border-radius: 50%;
-  filter: blur(100px);
-  animation: float 10s ease-in-out infinite;
+  background: linear-gradient(135deg, #ffc74f, #6a00ff);
+  top: 40%;
+  left: 60%;
+  animation-delay: 6s;
 }
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
+@keyframes floatAnim {
+  0% {
+    transform: translate(0, 0) scale(1);
   }
-  50% {
-    transform: translateY(-30px);
+  100% {
+    transform: translate(50px, 50px) scale(1.1);
   }
 }
 
