@@ -73,7 +73,7 @@ ul {
   top: 0;
   width: 100%;
   background: linear-gradient(135deg, #9b5cff, #6c63ff);
-  color: #ffffff;
+  color: #1a1a1a;
   z-index: 1000;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -288,7 +288,10 @@ ul {
   color: #ffffff;
 }
 [data-theme=dark] .header {
-  background: rgba(18, 18, 18, 0.85);
+  background: rgba(18, 18, 18, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
 }
 [data-theme=dark] .services {
   background: #1e1e1e;
@@ -299,6 +302,82 @@ ul {
 }
 [data-theme=dark] .cta {
   background: linear-gradient(135deg, #9b5cff, #6c63ff);
+}
+
+/* Burger animation when active */
+.burger.active .burger__line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.active .burger__line:nth-child(2) {
+  opacity: 0;
+}
+.burger.active .burger__line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Theme switcher styling */
+.theme-switcher {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+  /* When checked */
+}
+@media (max-width: 768px) {
+  .theme-switcher {
+    display: none; /* hide on mobile */
+  }
+}
+.theme-switcher .theme-switcher__input {
+  display: none;
+}
+.theme-switcher .theme-switcher__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50px;
+  height: 24px;
+  background: #ddd;
+  border-radius: 50px;
+  padding: 2px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.theme-switcher .theme-switcher__label::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.theme-switcher .theme-switcher__icon {
+  font-size: 14px;
+  position: relative;
+  z-index: 2;
+}
+.theme-switcher .theme-switcher__input:checked + .theme-switcher__label {
+  background: #9b5cff;
+}
+.theme-switcher .theme-switcher__input:checked + .theme-switcher__label::after {
+  transform: translateX(26px);
+}
+
+/* Mobile position */
+.nav__theme {
+  margin-top: 2rem;
+  justify-content: center;
+  display: none; /* hidden on desktop */
+}
+@media (max-width: 768px) {
+  .nav__theme {
+    display: flex; /* show inside burger menu on mobile */
+    justify-content: center;
+    margin-top: 2rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

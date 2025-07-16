@@ -35,12 +35,20 @@
               <a href="#contact" class="nav__link">Contact</a>
             </li>
           </ul>
-        </nav>
 
-        <!-- Theme Switcher -->
-        <button id="theme-switcher" class="btn btn--outline">
-          <i class="fas fa-moon"></i>
-        </button>
+          <!-- Theme Switcher inside burger menu (MOBILE) -->
+          <div class="theme-switcher nav__theme">
+            <input
+              type="checkbox"
+              id="theme-toggle-mobile"
+              class="theme-switcher__input"
+            />
+            <label for="theme-toggle-mobile" class="theme-switcher__label">
+              <span class="theme-switcher__icon sun">☀️</span>
+              <span class="theme-switcher__icon moon">🌙</span>
+            </label>
+          </div>
+        </nav>
 
         <!-- Burger button -->
         <button
@@ -54,6 +62,19 @@
           <span class="burger__line"></span>
           <span class="burger__line"></span>
         </button>
+
+        <!-- Theme Switcher desktop -->
+        <div class="theme-switcher">
+          <input
+            type="checkbox"
+            id="theme-toggle"
+            class="theme-switcher__input"
+          />
+          <label for="theme-toggle" class="theme-switcher__label">
+            <span class="theme-switcher__icon sun">☀️</span>
+            <span class="theme-switcher__icon moon">🌙</span>
+          </label>
+        </div>
       </div>
     </header>
 
