@@ -56,15 +56,18 @@
     .decor-circle {
       position: absolute;
       border-radius: 50%;
-      filter: blur(120px);
+      filter: blur(11px);
       opacity: 0.6;
-      animation: floatAnim 12s ease-in-out infinite alternate;
+      animation: floatAnim 4s ease-in-out infinite alternate;
+
+      @include c.glass(10px, rgba(255, 255, 255, 0.05));
     }
 
     .circle-1 {
-      width: 400px;
-      height: 400px;
+      width: 600px;
+      height: 600px;
       background: c.$gradient-circle1;
+      
       top: -100px;
       left: -150px;
       animation-delay: 0s;
@@ -74,18 +77,18 @@
       width: 500px;
       height: 500px;
       background: c.$gradient-circle2;
-      bottom: -200px;
-      right: -150px;
-      animation-delay: 3s;
+      bottom: -100px;
+      right: -75px;
+      animation-delay: 0s;
     }
 
     .circle-3 {
       width: 300px;
       height: 300px;
       background: c.$gradient-circle3;
-      top: 40%;
-      left: 60%;
-      animation-delay: 6s;
+      top: 25%;
+      left: 55%;
+      animation-delay: 4s;
     }
   }
 

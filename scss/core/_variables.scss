@@ -6,8 +6,10 @@ $color-bg-light: #f8f9fa;
 $color-bg-dark: #121212;
 $color-text-light: #ffffff;
 $color-text-dark: #1a1a1a;
+$color-gray-light: #b0b0b0;
 
 $gradient-primary: linear-gradient(135deg, $color-primary, $color-secondary);
+$gradient-secondary: linear-gradient(135deg, $color-secondary, $color-accent);
 $gradient-accent: linear-gradient(135deg, $color-accent, #ff8a00);
 $gradient-circle1: linear-gradient(135deg, #4fff84, #ff0008);
 $gradient-circle2: linear-gradient(135deg, #b04fff, #d9ff00);
@@ -17,13 +19,23 @@ $font-primary: "Poppins", sans-serif;
 
 $shadow-card: 0 8px 32px rgba(0, 0, 0, 0.25);
 $shadow-glow: 0 0 15px rgba(155, 92, 255, 0.8);
+$shadow-neon-green: 0 0 30px rgba(0, 255, 0, 0.3);
+$shadow-hover-purple: 0 0 15px rgba(138, 43, 226, 0.6);
 
 $spacing-xs: 0.5rem;
 $spacing-sm: 1rem;
 $spacing-md: 2rem;
 $spacing-lg: 4rem;
+$spacing-xl: 8rem;
 
 $radius: 12px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+
 $transition: all 0.3s ease;
 
 $breakpoint-mobile: 768px;
+$bp-lg: 1024px;
+$bp-md: 768px;
+$bp-sm: 480px;
+

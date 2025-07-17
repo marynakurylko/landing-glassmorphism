@@ -12,6 +12,42 @@
   align-items: center;
 }
 
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin grid-center {
+  display: grid;
+  place-items: center;
+}
+
+// MEDIA QUERY HELPERS
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 480px) { @content; }
+  }
+  @else if $breakpoint == md {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $breakpoint == lg {
+    @media (max-width: 1024px) { @content; }
+  }
+}
+
 @mixin glass($blur: 12px, $bg: rgba(255, 255, 255, 0.1)) {
   background: $bg;
   backdrop-filter: blur($blur);

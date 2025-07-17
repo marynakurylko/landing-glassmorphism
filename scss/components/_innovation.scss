@@ -1,0 +1,115 @@
+@use "../core" as c;
+
+.innovation {
+  padding: c.$spacing-xl 0;
+  background: c.$gradient-secondary;
+  color: c.$color-text-light;
+
+  &__container {
+    @include c.flex-between;
+    align-items: flex-start;
+    gap: c.$spacing-lg;
+
+    @media (max-width: c.$bp-lg) {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: c.$spacing-sm;
+
+    .highlight {
+      background: c.$gradient-accent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.125rem;
+    margin-bottom: c.$spacing-md;
+    color: c.$color-gray-light;
+  }
+
+  /* Features */
+  &__features {
+    display: flex;
+    flex-direction: column;
+    gap: c.$spacing-md;
+
+    .feature {
+      @include c.flex-start;
+      gap: c.$spacing-sm;
+      background: rgba(255, 255, 255, 0.05);
+      padding: c.$spacing-sm c.$spacing-md;
+      border-radius: c.$radius-lg;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 15px rgba(138, 43, 226, 0.6);
+      }
+
+      &__icon {
+        font-size: 1.8rem;
+      }
+
+      &__title {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: c.$color-text-light;
+      }
+
+      &__text {
+        font-size: 0.95rem;
+        color: c.$color-gray-light;
+      }
+    }
+  }
+
+  /* Stats Card */
+  &__stats {
+    .stats-card {
+      background: rgba(0, 0, 0, 0.6);
+      padding: c.$spacing-lg;
+      border-radius: c.$radius-xl;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(0, 255, 0, 0.3);
+      backdrop-filter: blur(10px);
+      max-width: 320px;
+
+      &__icon {
+        font-size: 3rem;
+        display: block;
+        margin-bottom: c.$spacing-sm;
+      }
+
+      &__title {
+        font-size: 1.8rem;
+        margin-bottom: c.$spacing-md;
+        color: c.$color-accent;
+      }
+
+      .stats-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          font-size: 1rem;
+          margin-bottom: c.$spacing-xs;
+
+          strong {
+            font-size: 1.2rem;
+            color: c.$color-text-light;
+          }
+        }
+      }
+    }
+  }
+}
