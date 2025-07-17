@@ -1,27 +1,15 @@
-@use "../core" as c;
-
+/* =============================
+   Dark Theme Overrides
+============================= */
 [data-theme="dark"] {
-  body {
-    background: c.$color-bg-dark;
-    color: c.$color-text-light;
-  }
+  --color-bg: #121212;
+  --color-text: #ffffff;
 
-  .header {
-    @include c.glass(10px, rgba(18, 18, 18, 0.05));
-    // background: rgba(18, 18, 18, 0.85);
-    color: c.$color-text-light;
-  }
+  --color-primary: #bb86fc;
+  --color-secondary: #3700b3;
+  --color-accent: #ff4f81;
 
-  .services {
-    background: #1e1e1e;
-
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      color: c.$color-text-light;
-    }
-  }
-
-  .cta {
-    background: c.$gradient-primary;
-  }
+  --gradient-primary: linear-gradient(135deg, #bb86fc, #3700b3);
+  --gradient-secondary: linear-gradient(135deg, #3700b3, #ff4f81);
+  --gradient-accent: linear-gradient(135deg, #ff4f81, #ff8a00);
 }

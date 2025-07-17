@@ -1,4 +1,6 @@
-/* Variables */
+/* =============================
+   SCSS Variables (Fallback)
+============================= */
 $color-primary: #9b5cff;
 $color-secondary: #6c63ff;
 $color-accent: #ff4f81;
@@ -34,8 +36,44 @@ $radius-xl: 24px;
 
 $transition: all 0.3s ease;
 
-$breakpoint-mobile: 768px;
 $bp-lg: 1024px;
 $bp-md: 768px;
 $bp-sm: 480px;
 
+/* =============================
+   CSS Custom Properties
+============================= */
+:root {
+  --color-primary: #{$color-primary};
+  --color-secondary: #{$color-secondary};
+  --color-accent: #{$color-accent};
+
+  --color-bg: #{$color-bg-light};
+  --color-text: #{$color-text-dark};
+  --color-gray: #{$color-gray-light};
+
+  --gradient-primary: #{$gradient-primary};
+  --gradient-secondary: #{$gradient-secondary};
+  --gradient-accent: #{$gradient-accent};
+  --gradient-circle1: #{$gradient-circle1};
+  --gradient-circle2: #{$gradient-circle2};
+  --gradient-circle3: #{$gradient-circle3};
+
+  --font-primary: #{$font-primary};
+
+  --shadow-card: #{$shadow-card};
+  --shadow-glow: #{$shadow-glow};
+  --shadow-hover-purple: #{$shadow-hover-purple};
+
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+
+  --radius: #{$radius};
+  --radius-lg: #{$radius-lg};
+  --radius-xl: #{$radius-xl};
+
+  --transition: #{$transition};
+}

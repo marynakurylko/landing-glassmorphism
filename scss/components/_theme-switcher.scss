@@ -17,7 +17,7 @@
 .theme-switcher {
   display: flex;
   align-items: center;
-  margin-left: c.$spacing-md;
+  margin-left: var(--spacing-md);
 
   @include c.respond(mobile) {
     display: none; /* hide on mobile */
@@ -33,21 +33,23 @@
     justify-content: space-between;
     width: 50px;
     height: 24px;
-    background: #ddd;
+    background: var(--color-gray);
     border-radius: 50px;
+    border: 1px solid var(--color-gray);
     padding: 2px;
     position: relative;
     cursor: pointer;
     transition: background 0.3s ease;
+    @include c.glass(10px, rgba(255, 255, 255, 0.05));
 
     &::after {
       content: "";
       position: absolute;
-      top: 2px;
-      left: 2px;
+      top: 1px;
+      left: 1px;
       width: 20px;
       height: 20px;
-      background: #fff;
+      background: var(--color-accent);
       border-radius: 50%;
       transition: transform 0.3s ease;
     }
@@ -59,9 +61,18 @@
     z-index: 2;
   }
 
+  .sun {
+    margin-left: 1px;
+  }
+
+  .moon {
+    margin-right: 1px;
+  }
+
   /* When checked */
   .theme-switcher__input:checked + .theme-switcher__label {
-    background: c.$color-primary;
+    background: var(--color-primary);
+    @include c.glass(10px, rgba(255, 255, 255, 0.05));
 
     &::after {
       transform: translateX(26px);
@@ -71,13 +82,13 @@
 
 /* Mobile position */
 .nav__theme {
-  margin-top: c.$spacing-md;
+  margin-top: var(--spacing-md);
   justify-content: center;
   display: none; /* hidden on desktop */
 
   @include c.respond(mobile) {
     display: flex; /* show inside burger menu on mobile */
     justify-content: center;
-    margin-top: c.$spacing-md;
+    margin-top: var(--spacing-md);
   }
 }
