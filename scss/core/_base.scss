@@ -1,4 +1,4 @@
-@use "variables" as v;
+@use "variables";
 
 *,
 *::before,
@@ -13,9 +13,9 @@ html {
 }
 
 body {
-  font-family: v.$font-primary;
-  background: v.$color-bg-light;
-  color: v.$color-text-dark;
+  font-family: var(--font-primary);
+  background: var(--color-bg);
+  color: var(--color-text);
   line-height: 1.6;
 }
 
@@ -41,10 +41,10 @@ ul {
   border: none;
   cursor: pointer;
   padding: 1rem 2rem;
-  border-radius: v.$radius;
-  transition: v.$transition;
-  background: v.$gradient-primary;
-  color: v.$color-text-light;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  background: var(--gradient-primary);
+  color: var(--color-text-light);
 
   &:hover {
     box-shadow: 0 0 15px rgba(155, 92, 255, 0.8),
@@ -54,14 +54,14 @@ ul {
 }
 
 .btn--accent {
-  background: v.$gradient-accent;
+  background: var(--gradient-accent);
 
   &:hover {
     box-shadow: 0 0 20px #ff4f81, 0 0 40px #ff8a00;
   }
 }
 
-// Animations
+/* Animations */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
