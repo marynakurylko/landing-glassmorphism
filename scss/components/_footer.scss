@@ -1,8 +1,8 @@
 @use "../core" as c;
 
 .footer {
-  background: var(--color-bg-dark);
-  color: var(--color-text-light);
+  background: var(--color-bg);
+  color: var(--color-text);
   padding: var(--spacing-lg) 0;
   font-size: 0.95rem;
 
@@ -49,7 +49,7 @@
       margin-bottom: 0.5rem;
 
       a {
-        color: var(--color-text-light);
+        color: var(--color-text);
         text-decoration: none;
         transition: var(--transition);
 
