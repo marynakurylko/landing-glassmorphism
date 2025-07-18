@@ -1,24 +1,115 @@
 @use "../core" as c;
 
-.cta {
+.cta-contact {
   background: var(--gradient-accent);
-  color: var(--color-text-light);
-  text-align: center;
+  color: var(--color-text);
   padding: var(--spacing-lg) var(--spacing-md);
+  text-align: center;
+  // border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
 
-  .cta__title {
+  /* Glassmorphism effect */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  /* Floating background decorations */
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    filter: blur(10px);
+    opacity: 0.2;
+    z-index: 0;
+  }
+  &::before {
+    top: -100px;
+    left: -100px;
+  }
+  &::after {
+    bottom: -100px;
+    right: -100px;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: var(--spacing-md);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-contact__title {
     font-size: 2.5rem;
     margin-bottom: var(--spacing-sm);
 
     span {
-      color: #fff; // прямий білий, залишаю
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); // залишаю
+      color: #fff;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
     }
   }
 
-  .cta__text {
-    margin-bottom: var(--spacing-md);
+  .cta-contact__text {
     font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Contact Form */
+  .cta-contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 1rem;
+      border-radius: var(--radius);
+      border: none;
+      outline: none;
+      background: rgba(255, 255, 255, 0.15);
+      color: var(--color-text);
+      font-size: 1rem;
+      backdrop-filter: blur(4px);
+      transition: var(--transition);
+      @include c.glass(10px, rgba(255, 255, 255, 0.05));
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      &:focus {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: none;
+    }
+
+    button {
+      margin-top: var(--spacing-sm);
+      align-self: center;
+      width: 50%;
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .cta-contact__title {
+      font-size: 2rem;
+    }
+    .cta-contact__text {
+      font-size: 1rem;
+    }
+    .cta-contact__form button {
+      width: 100%;
+    }
   }
 }
-

@@ -1,18 +1,5 @@
 @use "../core" as c;
 
-/* Burger animation when active */
-.burger.active {
-  .burger__line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  .burger__line:nth-child(2) {
-    opacity: 0;
-  }
-  .burger__line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-}
-
 /* Theme switcher styling */
 .theme-switcher {
   display: flex;
@@ -21,6 +8,7 @@
 
   @include c.respond(mobile) {
     display: none; /* hide on mobile */
+    margin-left: 0;
   }
 
   .theme-switcher__input {

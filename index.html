@@ -99,15 +99,45 @@
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="fade-in">
-      <div class="container">
-        <h2>About Us</h2>
-        <p>
-          We create beautiful and responsive web templates to help your business
-          grow online.
-        </p>
+    <section id="about" class="about fade-in">
+      <div class="container about__container">
+        <!-- Left Column -->
+        <div class="about__content">
+          <h2 class="section-title">Про нас</h2>
+          <p>
+            Ми створюємо сучасні веб-рішення, які допомагають бізнесам розвиватися
+            та досягати нових висот. Наш підхід — поєднання технологій, дизайну та
+            інновацій.
+          </p>
+          <p>
+            Команда професіоналів забезпечує високу якість кожного проєкту, щоб ви
+            отримали найкращий результат.
+          </p>
+          <a href="#contact" class="btn btn--accent">Зв'язатися з нами</a>
+        </div>
+
+        <!-- Right Column: Stats -->
+        <div class="about__stats">
+          <div class="stat-card">
+            <h3>5000+</h3>
+            <p>Щасливих клієнтів</p>
+          </div>
+          <div class="stat-card">
+            <h3>100%</h3>
+            <p>Гарантія якості</p>
+          </div>
+          <div class="stat-card">
+            <h3>0</h3>
+            <p>Днів очікування</p>
+          </div>
+          <div class="stat-card">
+            <h3>∞</h3>
+            <p>Ваш потенціал</p>
+          </div>
+        </div>
       </div>
     </section>
+
 
     <!-- SERVICES -->
     <section id="services" class="services fade-in">
@@ -183,18 +213,94 @@
       </div>
     </section>
 
+    <section class="cta-contact fade-in">
+      <div class="container">
+        <!-- CTA -->
+        <div class="cta-contact__content">
+          <h2 class="cta-contact__title">Ready to <span>Start?</span></h2>
+          <p class="cta-contact__text">Let's create something amazing together!</p>
+        </div>
+
+        <!-- Contact Form -->
+        <form
+          action="https://formspree.io/f/yourFormID"
+          method="POST"
+          class="cta-contact__form"
+        >
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn btn--accent">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer fade-in">
+      <div class="container footer__container">
+        <!-- Logo & About -->
+        <div class="footer__col footer__about">
+          <h3 class="footer__logo"><i class="fas fa-bolt"></i> NEXUS</h3>
+          <p>
+            Створюємо майбутнє разом з вами. Кожен день. Кожен проєкт.
+          </p>
+        </div>
+
+        <!-- Services -->
+        <div class="footer__col">
+          <h4>Послуги</h4>
+          <ul>
+            <li><a href="#">Web 3.0 Розробка</a></li>
+            <li><a href="#">AI & ML Рішення</a></li>
+            <li><a href="#">Cloud Native</a></li>
+            <li><a href="#">Консалтинг</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="footer__col">
+          <h4>Компанія</h4>
+          <ul>
+            <li><a href="#">Про нас</a></li>
+            <li><a href="#">Команда</a></li>
+            <li><a href="#">Кар'єра</a></li>
+            <li><a href="#">Блог</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer__col footer__contact">
+          <h4>Зв'язок</h4>
+          <ul>
+            <li><i class="fas fa-envelope"></i> hello@nexus.tech</li>
+            <li><i class="fas fa-phone"></i> +380 (44) 000-00-00</li>
+            <li><i class="fas fa-map-marker-alt"></i> Київ, Україна</li>
+          </ul>
+          <div class="footer__socials">
+            <a href="#"><i class="fas fa-mobile-alt"></i></a>
+            <a href="#"><i class="fas fa-briefcase"></i></a>
+            <a href="#"><i class="fas fa-rocket"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© 2025 NEXUS. Майбутнє починається тут.</p>
+      </div>
+    </footer>
+
+
 
     <!-- CTA -->
-    <section class="cta fade-in">
+    <!-- <section class="cta fade-in">
       <div class="container">
         <h2 class="cta__title">Ready to <span>Start?</span></h2>
         <p class="cta__text">Let's create something amazing together!</p>
         <a href="#contact" class="btn btn--accent">Contact Us</a>
       </div>
-    </section>
+    </section> -->
 
     <!-- CONTACT -->
-    <section id="contact" class="contact fade-in">
+    <!-- <section id="contact" class="contact fade-in">
       <div class="container">
         <h2>Contact Us</h2>
         <form action="https://formspree.io/f/yourFormID" method="POST">
@@ -208,12 +314,12 @@
           <button type="submit" class="btn btn--accent">Send Message</button>
         </form>
       </div>
-    </section>
+    </section> -->
 
     <!-- FOOTER -->
-    <footer>
+    <!-- <footer>
       <p>© 2025 MyBrand. All rights reserved.</p>
-    </footer>
+    </footer> -->
 
     <script src="js/animations.js"></script>
     <script src="js/theme.js"></script>

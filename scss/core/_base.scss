@@ -44,7 +44,7 @@ ul {
   border-radius: var(--radius);
   transition: var(--transition);
   background: var(--gradient-primary);
-  color: var(--color-text-light);
+  color: var(--color-text);
 
   &:hover {
     box-shadow: 0 0 15px rgba(155, 92, 255, 0.8),

@@ -6,7 +6,16 @@ const navMenu = document.getElementById("nav-menu");
 
 burger.addEventListener("click", () => {
   const isOpen = navMenu.classList.toggle("active");
+  burger.classList.toggle("active"); // Додаємо клас для анімації
   burger.setAttribute("aria-expanded", isOpen);
+});
+
+document.querySelectorAll(".nav__link").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    burger.classList.remove("active");
+    burger.setAttribute("aria-expanded", false);
+  });
 });
 
 /* ================================
