@@ -3,7 +3,7 @@
 .footer {
   background: var(--color-bg);
   color: var(--color-text);
-  padding: var(--spacing-lg) 0;
+  padding: var(--spacing-lg) 0 0 0;
   font-size: 0.95rem;
 
   .footer__container {
@@ -14,12 +14,12 @@
     margin: 0 auto;
     padding: 0 var(--spacing-md);
 
-    @media (max-width: 768px) {
+    @include c.respond(mobile) {
       grid-template-columns: 1fr 1fr;
       gap: var(--spacing-md);
     }
 
-    @media (max-width: 480px) {
+    @include c.respond(sm) {
       grid-template-columns: 1fr;
       text-align: center;
     }
@@ -63,7 +63,15 @@
   .footer__contact ul li {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: var(--spacing-xs);
+    @include c.respond(mobile) {
+      @include c.flex-start;
+    }
+
+    @include c.respond(sm) {
+      @include c.flex-center;
+      text-align: center;
+    }
 
     i {
       color: var(--color-accent);
@@ -74,7 +82,23 @@
     display: flex;
     gap: var(--spacing-sm);
     margin-top: var(--spacing-sm);
+    @include c.respond(mobile) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+    @include c.respond(mobile) {
+      @include c.flex-start;
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
 
+    @include c.respond(sm) {
+      @include c.flex-center;
+      text-align: center;
+    }
     a {
       display: flex;
       align-items: center;
@@ -99,6 +123,6 @@
     margin-top: var(--spacing-md);
     font-size: 0.85rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: var(--spacing-sm);
+    padding: var(--spacing-sm) 0;
   }
 }

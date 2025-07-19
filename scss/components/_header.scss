@@ -1,10 +1,10 @@
 @use "../core" as c;
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
-  background: var(--gradient-primary);
+  // background: var(--gradient-primary);
   color: var(--color-text);
   z-index: 1000;
   @include c.glass(10px, rgba(255, 255, 255, 0.05));
@@ -18,6 +18,7 @@
   &__logo {
     font-weight: 700;
     font-size: 1.5rem;
+    // color: var(--color-primary);
   }
 
   .header__nav {
@@ -42,21 +43,34 @@
       position: absolute;
       top: 100%;
       right: 0;
-      // background: var(--color-bg);
+      width: 250px;
+      height: 100vh;
+      display: none;
       flex-direction: column;
       padding: var(--spacing-sm);
-      display: none;
-      
+      border-radius: 0 0 0 var(--radius-lg);
+      background: rgba(255, 255, 255, 0.5);
+
       &.active {
-        height: 100vh;
-        width: 250px;
         display: flex;
-        @include c.glass(10px, rgba(255, 255, 255, 0.05));
+        animation: slideIn 0.3s ease forwards;
+
         .nav__list {
           flex-direction: column;
           justify-content: center;
           align-items: center;
         }
+      }
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
       }
     }
   }
@@ -83,7 +97,6 @@
     display: flex;
   }
 
-  /* Активний стан */
   &.active {
     .burger__line:nth-child(1) {
       transform: rotate(45deg) translate(5px, 6px);
@@ -96,6 +109,3 @@
     }
   }
 }
-
-
-

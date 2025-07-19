@@ -8,11 +8,12 @@
   .section-title {
     font-size: 2rem;
     margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
   }
 
   .section-subtitle {
     margin-bottom: var(--spacing-md);
-    color: rgba(0, 0, 0, 0.6); // тут залишаємо, бо немає в CSS-змінних
+    color: var(--color-gray);
   }
 
   .services__grid {

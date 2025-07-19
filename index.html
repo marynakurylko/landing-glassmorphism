@@ -10,6 +10,13 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-**************"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
@@ -20,7 +27,7 @@
     <header class="header">
       <div class="container header__container">
         <!-- Logo -->
-        <div class="header__logo">MyBrand</div>
+        <div class="header__logo"><i class="fas fa-bolt"></i> MyBrand</div>
 
         <!-- Navigation -->
         <nav class="header__nav" id="nav-menu">
@@ -30,6 +37,9 @@
             </li>
             <li class="nav__item">
               <a href="#services" class="nav__link">Services</a>
+            </li>
+            <li class="nav__item">
+              <a href="#innovations" class="nav__link">Innovations</a>
             </li>
             <li class="nav__item">
               <a href="#contact" class="nav__link">Contact</a>
@@ -44,8 +54,12 @@
               class="theme-switcher__input"
             />
             <label for="theme-toggle-mobile" class="theme-switcher__label">
-              <span class="theme-switcher__icon sun">☀️</span>
-              <span class="theme-switcher__icon moon">🌙</span>
+              <span class="theme-switcher__icon sun"
+                ><i class="fa-solid fa-sun"></i
+              ></span>
+              <span class="theme-switcher__icon moon"
+                ><i class="fa-solid fa-moon"></i
+              ></span>
             </label>
           </div>
         </nav>
@@ -71,8 +85,12 @@
             class="theme-switcher__input"
           />
           <label for="theme-toggle" class="theme-switcher__label">
-            <span class="theme-switcher__icon sun">☀️</span>
-            <span class="theme-switcher__icon moon">🌙</span>
+            <span class="theme-switcher__icon sun"
+              ><i class="fa-solid fa-sun"></i
+            ></span>
+            <span class="theme-switcher__icon moon"
+              ><i class="fa-solid fa-moon"></i
+            ></span>
           </label>
         </div>
       </div>
@@ -105,13 +123,13 @@
         <div class="about__content">
           <h2 class="section-title">Про нас</h2>
           <p>
-            Ми створюємо сучасні веб-рішення, які допомагають бізнесам розвиватися
-            та досягати нових висот. Наш підхід — поєднання технологій, дизайну та
-            інновацій.
+            Ми створюємо сучасні веб-рішення, які допомагають бізнесам
+            розвиватися та досягати нових висот. Наш підхід — поєднання
+            технологій, дизайну та інновацій.
           </p>
           <p>
-            Команда професіоналів забезпечує високу якість кожного проєкту, щоб ви
-            отримали найкращий результат.
+            Команда професіоналів забезпечує високу якість кожного проєкту, щоб
+            ви отримали найкращий результат.
           </p>
           <a href="#contact" class="btn btn--accent">Зв'язатися з нами</a>
         </div>
@@ -138,7 +156,6 @@
       </div>
     </section>
 
-
     <!-- SERVICES -->
     <section id="services" class="services fade-in">
       <div class="container">
@@ -161,7 +178,7 @@
       </div>
     </section>
 
-    <section class="innovation fade-in">
+    <section id="innovations" class="innovation fade-in">
       <div class="container innovation__container">
         <!-- Left Content -->
         <div class="innovation__content">
@@ -174,21 +191,27 @@
 
           <div class="innovation__features">
             <div class="feature">
-              <span class="feature__icon">⚡</span>
+              <span class="feature__icon"
+                ><i class="fa-solid fa-bolt"></i
+              ></span>
               <div>
                 <h4 class="feature__title">Швидкість блискавки</h4>
                 <p class="feature__text">Реалізуємо ідеї за рекордний час</p>
               </div>
             </div>
             <div class="feature">
-              <span class="feature__icon">🎯</span>
+              <span class="feature__icon"
+                ><i class="fa-solid fa-arrows-up-down-left-right"></i
+              ></span>
               <div>
                 <h4 class="feature__title">Точність снайпера</h4>
                 <p class="feature__text">Кожна деталь має значення</p>
               </div>
             </div>
             <div class="feature">
-              <span class="feature__icon">✨</span>
+              <span class="feature__icon"
+                ><i class="fa-solid fa-wand-magic-sparkles"></i
+              ></span>
               <div>
                 <h4 class="feature__title">Магія інновацій</h4>
                 <p class="feature__text">Перетворюємо мрії в реальність</p>
@@ -213,12 +236,14 @@
       </div>
     </section>
 
-    <section class="cta-contact fade-in">
+    <section id="contact" class="cta-contact fade-in">
       <div class="container">
         <!-- CTA -->
         <div class="cta-contact__content">
           <h2 class="cta-contact__title">Ready to <span>Start?</span></h2>
-          <p class="cta-contact__text">Let's create something amazing together!</p>
+          <p class="cta-contact__text">
+            Let's create something amazing together!
+          </p>
         </div>
 
         <!-- Contact Form -->
@@ -229,7 +254,11 @@
         >
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" required></textarea>
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            required
+          ></textarea>
           <button type="submit" class="btn btn--accent">Send Message</button>
         </form>
       </div>
@@ -239,87 +268,61 @@
       <div class="container footer__container">
         <!-- Logo & About -->
         <div class="footer__col footer__about">
-          <h3 class="footer__logo"><i class="fas fa-bolt"></i> NEXUS</h3>
-          <p>
-            Створюємо майбутнє разом з вами. Кожен день. Кожен проєкт.
-          </p>
+          <h3 class="footer__logo"><i class="fas fa-bolt"></i> MyBrand</h3>
+          <p>Створюємо майбутнє разом з вами. Кожен день. Кожен проєкт.</p>
         </div>
 
         <!-- Services -->
         <div class="footer__col">
-          <h4>Послуги</h4>
+          <h4>Services</h4>
           <ul>
-            <li><a href="#">Web 3.0 Розробка</a></li>
-            <li><a href="#">AI & ML Рішення</a></li>
-            <li><a href="#">Cloud Native</a></li>
-            <li><a href="#">Консалтинг</a></li>
+            <li><a href="#services">Responsive Design</a></li>
+            <li><a href="#services">SEO Optimization</a></li>
+            <li><a href="#services">Custom Development</a></li>
           </ul>
         </div>
 
         <!-- Company -->
         <div class="footer__col">
-          <h4>Компанія</h4>
+          <h4>Company</h4>
           <ul>
-            <li><a href="#">Про нас</a></li>
-            <li><a href="#">Команда</a></li>
-            <li><a href="#">Кар'єра</a></li>
-            <li><a href="#">Блог</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#innovations">Innovations</a></li>
           </ul>
         </div>
 
         <!-- Contact -->
         <div class="footer__col footer__contact">
-          <h4>Зв'язок</h4>
+          <h4>Contacts</h4>
           <ul>
-            <li><i class="fas fa-envelope"></i> hello@nexus.tech</li>
-            <li><i class="fas fa-phone"></i> +380 (44) 000-00-00</li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:hello@nexus.tech">hello@nexus.tech</a>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+380440000000">+380 (44) 000-00-00</a>
+            </li>
             <li><i class="fas fa-map-marker-alt"></i> Київ, Україна</li>
           </ul>
           <div class="footer__socials">
-            <a href="#"><i class="fas fa-mobile-alt"></i></a>
-            <a href="#"><i class="fas fa-briefcase"></i></a>
-            <a href="#"><i class="fas fa-rocket"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.facebook.com/" target="_blank"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="https://x.com/" target="_blank"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
           </div>
         </div>
       </div>
 
       <div class="footer__bottom">
-        <p>© 2025 NEXUS. Майбутнє починається тут.</p>
+        <p>© 2025 MyBrand. Майбутнє починається тут.</p>
       </div>
     </footer>
-
-
-
-    <!-- CTA -->
-    <!-- <section class="cta fade-in">
-      <div class="container">
-        <h2 class="cta__title">Ready to <span>Start?</span></h2>
-        <p class="cta__text">Let's create something amazing together!</p>
-        <a href="#contact" class="btn btn--accent">Contact Us</a>
-      </div>
-    </section> -->
-
-    <!-- CONTACT -->
-    <!-- <section id="contact" class="contact fade-in">
-      <div class="container">
-        <h2>Contact Us</h2>
-        <form action="https://formspree.io/f/yourFormID" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            required
-          ></textarea>
-          <button type="submit" class="btn btn--accent">Send Message</button>
-        </form>
-      </div>
-    </section> -->
-
-    <!-- FOOTER -->
-    <!-- <footer>
-      <p>© 2025 MyBrand. All rights reserved.</p>
-    </footer> -->
 
     <script src="js/animations.js"></script>
     <script src="js/theme.js"></script>

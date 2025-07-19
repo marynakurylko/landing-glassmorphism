@@ -6,11 +6,10 @@
   color: var(--color-text);
 
   &__container {
-    @include c.flex-between;
-    align-items: flex-start;
-    gap: var(--spacing-lg);
+    @include c.flex-center;
+    gap: var(--spacing-xl);
 
-    @media (max-width: var(--bp-lg)) {
+    @include c.respond(mobile) {
       flex-direction: column;
       text-align: center;
       align-items: center;
@@ -44,7 +43,7 @@
     .feature {
       @include c.flex-start;
       gap: var(--spacing-sm);
-      background: rgba(255, 255, 255, 0.05); // немає css-змінної, залишаємо як є
+      @include c.glass(15px);
       padding: var(--spacing-sm) var(--spacing-md);
       border-radius: var(--radius-lg);
       backdrop-filter: blur(10px);
@@ -75,11 +74,11 @@
   /* Stats Card */
   &__stats {
     .stats-card {
-      background: rgba(0, 0, 0, 0.6); // залишаємо, бо немає css-змінної
+      @include c.glass(15px);
       padding: var(--spacing-lg);
       border-radius: var(--radius-xl);
       text-align: center;
-      box-shadow: var(--shadow-neon-green);
+      box-shadow: var(--shadow-hover-purple);
       backdrop-filter: blur(10px);
       max-width: 320px;
 
@@ -92,7 +91,7 @@
       &__title {
         font-size: 1.8rem;
         margin-bottom: var(--spacing-md);
-        color: var(--color-accent);
+        color: var(--color-primary);
       }
 
       .stats-list {
@@ -113,4 +112,3 @@
     }
   }
 }
-
