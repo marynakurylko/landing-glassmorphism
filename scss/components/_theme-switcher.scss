@@ -1,6 +1,8 @@
 @use "../core" as c;
 
-/* Theme switcher styling */
+/* =============================
+   Theme switcher styling
+============================= */
 .theme-switcher {
   display: flex;
   align-items: center;
@@ -69,7 +71,9 @@
   }
 }
 
-/* Mobile position */
+/* =============================
+   Mobile position
+============================= */
 .nav__theme {
   margin-top: var(--spacing-md);
   justify-content: center;

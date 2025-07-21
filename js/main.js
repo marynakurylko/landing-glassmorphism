@@ -1,12 +1,13 @@
 /* ================================
    BURGER MENU TOGGLE
 ================================== */
+
 const burger = document.getElementById("burger");
 const navMenu = document.getElementById("nav-menu");
 
 burger.addEventListener("click", () => {
   const isOpen = navMenu.classList.toggle("active");
-  burger.classList.toggle("active"); // Додаємо клас для анімації
+  burger.classList.toggle("active");
   burger.setAttribute("aria-expanded", isOpen);
 });
 
@@ -21,6 +22,7 @@ document.querySelectorAll(".nav__link").forEach((link) => {
 /* ================================
    PROGRESS BAR ON SCROLL
 ================================== */
+
 const progressBar = document.createElement("div");
 progressBar.style.position = "fixed";
 progressBar.style.top = "0";
@@ -41,6 +43,7 @@ window.addEventListener("scroll", () => {
 /* ================================
    RIPPLE EFFECT FOR BUTTONS
 ================================== */
+
 document.querySelectorAll(".btn").forEach((button) => {
   button.addEventListener("click", function (e) {
     const ripple = document.createElement("span");

@@ -34,7 +34,9 @@ ul {
   margin: 0 auto;
 }
 
-/* Buttons with glow effect */
+/* =============================
+   Buttons with glow effect
+============================= */
 .btn {
   display: inline-block;
   font-weight: 600;
@@ -61,7 +63,9 @@ ul {
   }
 }
 
-/* Animations */
+/* =============================
+   Animations
+============================= */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -73,7 +77,9 @@ ul {
   transform: translateY(0);
 }
 
-// SCROLL UP BTN
+/* =============================
+   SCROLL UP BTN
+============================= */
 
 .scroll-up {
   position: fixed;

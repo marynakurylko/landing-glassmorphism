@@ -29,7 +29,6 @@
       transition: var(--transition);
       position: relative;
 
-      // швидша анімація
       animation: floating 4s ease-in-out infinite;
       animation-play-state: running;
 
@@ -45,7 +44,6 @@
         font-size: 1.5rem;
       }
 
-      // Індивідуальні затримки для різних карток
       &:nth-child(1) {
         animation-delay: 0s;
       }
@@ -66,7 +64,7 @@
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-10px); // трошки більше руху
+      transform: translateY(-10px);
     }
     100% {
       transform: translateY(0);
