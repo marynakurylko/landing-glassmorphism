@@ -101,23 +101,23 @@
         <div class="decor-circle circle-3"></div>
       </div>
       <div class="hero__content">
-        <h1 class="hero__title">
+        <h1 class="hero__title fade-in">
           Build Your <span class="highlight">Digital Presence</span>
         </h1>
-        <p class="hero__subtitle">
+        <p class="hero__subtitle fade-in">
           Modern, responsive and minimal design for your next project.
         </p>
-        <div class="hero__buttons">
+        <div class="hero__buttons fade-in">
           <a href="#contact" class="btn btn--accent">Get Started</a>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about" class="about fade-in">
+    <section id="about" class="about">
       <div class="container about__container">
         <!-- Left Column -->
-        <div class="about__content">
+        <div class="about__content fade-in">
           <h2 class="section-title">Про нас</h2>
           <p>
             Ми створюємо сучасні веб-рішення, які допомагають бізнесам
@@ -133,19 +133,19 @@
 
         <!-- Right Column: Stats -->
         <div class="about__stats">
-          <div class="stat-card">
+          <div class="stat-card fade-in">
             <h3>5000+</h3>
             <p>Щасливих клієнтів</p>
           </div>
-          <div class="stat-card">
+          <div class="stat-card fade-in">
             <h3>100%</h3>
             <p>Гарантія якості</p>
           </div>
-          <div class="stat-card">
+          <div class="stat-card fade-in">
             <h3>0</h3>
             <p>Днів очікування</p>
           </div>
-          <div class="stat-card">
+          <div class="stat-card fade-in">
             <h3>∞</h3>
             <p>Ваш потенціал</p>
           </div>
@@ -154,11 +154,13 @@
     </section>
 
     <!-- SERVICES -->
-    <section id="services" class="services fade-in">
+    <section id="services" class="services">
       <div class="container">
-        <h2 class="section-title">Our Services</h2>
-        <p class="section-subtitle">What we can offer for you</p>
-        <div class="services__grid">
+        <div class="fade-in">
+          <h2 class="section-title">Our Services</h2>
+          <p class="section-subtitle">What we can offer for you</p>
+        </div>
+        <div class="services__grid fade-in">
           <div class="card">
             <h3>Responsive Design</h3>
             <p>Your site will look great on any device.</p>
@@ -175,7 +177,7 @@
       </div>
     </section>
 
-    <section id="innovations" class="innovation fade-in">
+    <section id="innovations" class="innovation">
       <div class="container innovation__container">
         <!-- Left Content -->
         <div class="innovation__content">
@@ -187,7 +189,7 @@
           </p>
 
           <div class="innovation__features">
-            <div class="feature">
+            <div class="feature fade-in">
               <span class="feature__icon"
                 ><i class="fa-solid fa-bolt"></i
               ></span>
@@ -196,7 +198,7 @@
                 <p class="feature__text">Реалізуємо ідеї за рекордний час</p>
               </div>
             </div>
-            <div class="feature">
+            <div class="feature fade-in">
               <span class="feature__icon"
                 ><i class="fa-solid fa-arrows-up-down-left-right"></i
               ></span>
@@ -205,7 +207,7 @@
                 <p class="feature__text">Кожна деталь має значення</p>
               </div>
             </div>
-            <div class="feature">
+            <div class="feature fade-in">
               <span class="feature__icon"
                 ><i class="fa-solid fa-wand-magic-sparkles"></i
               ></span>
@@ -218,7 +220,7 @@
         </div>
 
         <!-- Right Stats Card -->
-        <div class="innovation__stats">
+        <div class="innovation__stats fade-in">
           <div class="stats-card">
             <span class="stats-card__icon">🏆</span>
             <h3 class="stats-card__title">№1 В УКРАЇНІ</h3>
@@ -233,10 +235,10 @@
       </div>
     </section>
 
-    <section id="contact" class="cta-contact fade-in">
+    <section id="contact" class="cta-contact">
       <div class="container">
         <!-- CTA -->
-        <div class="cta-contact__content">
+        <div class="cta-contact__content fade-in">
           <h2 class="cta-contact__title">Ready to <span>Start?</span></h2>
           <p class="cta-contact__text">
             Let's create something amazing together!
@@ -247,7 +249,7 @@
         <form
           action="https://formspree.io/f/yourFormID"
           method="POST"
-          class="cta-contact__form"
+          class="cta-contact__form fade-in"
         >
           <input type="text" name="name" placeholder="Your Name" required />
           <input type="email" name="email" placeholder="Your Email" required />
@@ -261,16 +263,16 @@
       </div>
     </section>
 
-    <footer class="footer fade-in">
+    <footer class="footer">
       <div class="container footer__container">
         <!-- Logo & About -->
-        <div class="footer__col footer__about">
+        <div class="footer__col footer__about fade-in">
           <h3 class="footer__logo"><i class="fas fa-bolt"></i> MyBrand</h3>
           <p>Створюємо майбутнє разом з вами. Кожен день. Кожен проєкт.</p>
         </div>
 
         <!-- Services -->
-        <div class="footer__col">
+        <div class="footer__col fade-in">
           <h4>Services</h4>
           <ul>
             <li><a href="#services">Responsive Design</a></li>
@@ -280,7 +282,7 @@
         </div>
 
         <!-- Company -->
-        <div class="footer__col">
+        <div class="footer__col fade-in">
           <h4>Company</h4>
           <ul>
             <li><a href="#about">About Us</a></li>
@@ -289,7 +291,7 @@
         </div>
 
         <!-- Contact -->
-        <div class="footer__col footer__contact">
+        <div class="footer__col footer__contact fade-in">
           <h4>Contacts</h4>
           <ul>
             <li>
@@ -300,18 +302,24 @@
               <i class="fas fa-phone"></i>
               <a href="tel:+380440000000">+380 (44) 000-00-00</a>
             </li>
-            <li><i class="fas fa-map-marker-alt"></i> Київ, Україна</li>
+            <li><i class="fas fa-map-marker-alt"></i> Kharkiv, Ukraine</li>
           </ul>
           <div class="footer__socials">
-            <a href="https://www.instagram.com/" target="_blank"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="https://www.facebook.com/" target="_blank"
-              ><i class="fa-brands fa-facebook-f"></i
-            ></a>
-            <a href="https://x.com/" target="_blank"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
+            <div class="fade-in">
+              <a href="https://www.instagram.com/" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+            <div class="fade-in">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+            </div>
+            <div class="fade-in">
+              <a href="https://x.com/" target="_blank"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
@@ -320,6 +328,10 @@
         <p>© 2025 MyBrand. Майбутнє починається тут.</p>
       </div>
     </footer>
+
+    <button id="scroll-up" class="scroll-up" aria-label="Scroll to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="js/animations.js"></script>
     <script src="js/theme.js"></script>

@@ -10,7 +10,7 @@ burger.addEventListener("click", () => {
   burger.setAttribute("aria-expanded", isOpen);
 });
 
-document.querySelectorAll(".nav__link").forEach(link => {
+document.querySelectorAll(".nav__link").forEach((link) => {
   link.addEventListener("click", () => {
     navMenu.classList.remove("active");
     burger.classList.remove("active");
@@ -52,5 +52,26 @@ document.querySelectorAll(".btn").forEach((button) => {
     setTimeout(() => {
       ripple.remove();
     }, 600);
+  });
+});
+
+/* ================================
+   SCROLL UP BUTTON
+================================== */
+
+const scrollBtn = document.getElementById("scroll-up");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 400) {
+    scrollBtn.classList.add("visible");
+  } else {
+    scrollBtn.classList.remove("visible");
+  }
+});
+
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
 });
