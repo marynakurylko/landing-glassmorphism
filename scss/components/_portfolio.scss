@@ -5,6 +5,17 @@
   background: var(--color-bg);
   text-align: center;
 
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-primary);
+  }
+
+  .section-subtitle {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-gray);
+  }
+
   .portfolio__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));

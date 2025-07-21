@@ -1,0 +1,174 @@
+@use "../core" as c;
+
+.testimonials {
+  padding: var(--spacing-lg) 0;
+  background: var(--gradient-primary);
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .testimonials__slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 0 50px; // простір під кнопки
+  }
+
+  .testimonials__slider {
+    display: flex;
+    gap: 20px; // якщо треба відступи між слайдами
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-accent);
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 15;
+    transition: background 0.3s;
+
+    &:hover {
+      background: var(--color-accent-hover);
+    }
+
+    &.prev {
+      left: 10px; // всередині wrapper, але не обрізається
+    }
+
+    &.next {
+      right: 10px;
+    }
+  }
+
+  .testimonial {
+    min-width: 100%;
+    max-width: 100%;
+    padding: var(--spacing-md);
+    @include c.glass(15px, rgba(255, 255, 255, 0.1));
+    border-radius: var(--radius);
+    text-align: center;
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: var(--spacing-sm);
+      object-fit: cover;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+
+    .role {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .text {
+      font-size: 1rem;
+      margin-bottom: var(--spacing-xs);
+      font-style: italic;
+    }
+
+    .stars {
+      font-size: 1.2rem;
+      color: #ffd700;
+    }
+  }
+
+  .slider-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-md);
+    gap: 10px;
+
+    button {
+      background: var(--color-accent);
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      transition: 0.3s;
+
+      &:hover {
+        background: var(--color-accent-hover);
+      }
+    }
+  }
+
+  .slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--spacing-sm);
+    gap: 8px;
+
+    button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+
+      &.active {
+        background: var(--color-accent);
+      }
+    }
+  }
+
+  /* ===== Response ===== */
+
+  //   @media (max-width: 480px) {
+  //     .testimonial {
+  //       min-width: 50%;
+  //       max-width: 50%;
+  //     }
+  //   }
+
+  @media (max-width: 768px) {
+    .testimonials__slider-wrapper {
+      padding: 0 30px;
+    }
+
+    .slider-btn {
+      width: 32px;
+      height: 32px;
+      font-size: 14px;
+    }
+
+    .testimonial {
+      min-width: 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .testimonial {
+      min-width: 33.33%;
+      max-width: 33.33%;
+    }
+  }
+}
