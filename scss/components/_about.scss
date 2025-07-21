@@ -11,7 +11,7 @@
     gap: var(--spacing-lg);
     align-items: center;
 
-    @media (max-width: 768px) {
+    @include c.respond(mobile) {
       grid-template-columns: 1fr;
       text-align: center;
     }
@@ -34,26 +34,22 @@
     }
   }
 
-  /* Статистика */
   .about__stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-md);
 
-    @media (max-width: 480px) {
+    @include c.respond(sm) {
       grid-template-columns: 1fr;
     }
 
     .stat-card {
       position: relative;
-    //   background: rgba(255, 255, 255, 0.05);
       padding: var(--spacing-md);
       border-radius: var(--radius-lg);
       text-align: center;
       backdrop-filter: blur(10px);
       overflow: hidden;
-
-    //   @include c.glass(10px, rgba(255, 255, 255, 0.05));
 
       h3 {
         font-size: 2rem;
@@ -69,12 +65,11 @@
         color: var(--color-text);
       }
 
-      /* Анімований контур */
       &::before {
         content: "";
         position: absolute;
         inset: 0;
-        padding: 2px; /* товщина рамки */
+        padding: 2px;
         border-radius: inherit;
         background: linear-gradient(
           90deg,
@@ -86,16 +81,13 @@
         background-size: 400%;
         animation: border-move 6s linear infinite;
 
-        /* робимо тільки рамку */
-        -webkit-mask: 
-          linear-gradient(#fff 0 0) content-box, 
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,
           linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor;
         mask-composite: exclude;
         z-index: 0;
       }
 
-      /* Внутрішній фон */
       &::after {
         content: "";
         position: absolute;
@@ -113,7 +105,6 @@
     }
   }
 
-  /* Анімація бігаючого бордера */
   @keyframes border-move {
     0% {
       background-position: 0% 50%;

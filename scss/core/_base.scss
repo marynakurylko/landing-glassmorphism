@@ -34,7 +34,9 @@ ul {
   margin: 0 auto;
 }
 
-/* Buttons with glow effect */
+/* =============================
+   Buttons with glow effect
+============================= */
 .btn {
   display: inline-block;
   font-weight: 600;
@@ -61,7 +63,9 @@ ul {
   }
 }
 
-/* Animations */
+/* =============================
+   Animations
+============================= */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -71,4 +75,41 @@ ul {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* =============================
+   SCROLL UP BTN
+============================= */
+
+.scroll-up {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
 }

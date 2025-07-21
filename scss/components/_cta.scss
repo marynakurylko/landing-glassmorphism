@@ -5,7 +5,6 @@
   color: var(--color-text);
   padding: var(--spacing-lg) var(--spacing-md);
   text-align: center;
-  // border-radius: var(--radius-lg);
   position: relative;
   overflow: hidden;
 
@@ -101,7 +100,7 @@
   }
 
   /* Responsive */
-  @media (max-width: 768px) {
+  @include c.respond(mobile) {
     .cta-contact__title {
       font-size: 2rem;
     }
