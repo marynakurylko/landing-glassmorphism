@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* =============================
    SCSS Variables (Fallback)
 ============================= */
@@ -68,7 +67,9 @@ ul {
   margin: 0 auto;
 }
 
-/* Buttons with glow effect */
+/* =============================
+   Buttons with glow effect
+============================= */
 .btn {
   display: inline-block;
   font-weight: 600;
@@ -92,7 +93,9 @@ ul {
   box-shadow: 0 0 20px #ff4f81, 0 0 40px #ff8a00;
 }
 
-/* Animations */
+/* =============================
+   Animations
+============================= */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -104,6 +107,9 @@ ul {
   transform: translateY(0);
 }
 
+/* =============================
+   SCROLL UP BTN
+============================= */
 .scroll-up {
   position: fixed;
   bottom: 30px;
@@ -527,8 +533,6 @@ ul {
   padding: var(--spacing-lg) 0;
   background: var(--color-bg);
   color: var(--color-text-dark);
-  /* Статистика */
-  /* Анімація бігаючого бордера */
 }
 .about .about__container {
   display: grid;
@@ -571,8 +575,6 @@ ul {
   text-align: center;
   backdrop-filter: blur(10px);
   overflow: hidden;
-  /* Анімований контур */
-  /* Внутрішній фон */
 }
 .about .about__stats .stat-card h3 {
   font-size: 2rem;
@@ -590,12 +592,11 @@ ul {
   content: "";
   position: absolute;
   inset: 0;
-  padding: 2px; /* товщина рамки */
+  padding: 2px;
   border-radius: inherit;
   background: linear-gradient(90deg, var(--color-primary), var(--color-accent), var(--color-secondary), var(--color-primary));
   background-size: 400%;
   animation: border-move 6s linear infinite;
-  /* робимо тільки рамку */
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -745,7 +746,9 @@ ul {
   --gradient-accent: linear-gradient(135deg, #ff4f81, #ff8a00);
 }
 
-/* Theme switcher styling */
+/* =============================
+   Theme switcher styling
+============================= */
 .theme-switcher {
   display: flex;
   align-items: center;
@@ -811,7 +814,9 @@ ul {
   transform: translateX(26px);
 }
 
-/* Mobile position */
+/* =============================
+   Mobile position
+============================= */
 .nav__theme {
   margin-top: var(--spacing-md);
   justify-content: center;
@@ -927,6 +932,56 @@ ul {
 .innovation__stats .stats-card .stats-list li strong {
   font-size: 1.2rem;
   color: var(--color-text);
+}
+
+.portfolio {
+  padding: var(--spacing-lg) 0;
+  background: var(--color-bg);
+  text-align: center;
+}
+.portfolio .portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+.portfolio .portfolio__grid .portfolio__item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.portfolio .portfolio__grid .portfolio__item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.portfolio .portfolio__grid .portfolio__item .portfolio__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.portfolio .portfolio__grid .portfolio__item:hover img {
+  transform: scale(1.1);
+}
+.portfolio .portfolio__grid .portfolio__item:hover .portfolio__overlay {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

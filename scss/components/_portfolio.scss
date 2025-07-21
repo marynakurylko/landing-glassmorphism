@@ -1,0 +1,56 @@
+@use "../core" as c;
+
+.portfolio {
+  padding: var(--spacing-lg) 0;
+  background: var(--color-bg);
+  text-align: center;
+
+  .portfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+
+    .portfolio__item {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      @include c.glass(15px);
+      box-shadow: var(--shadow-card);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .portfolio__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+        .portfolio__overlay {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

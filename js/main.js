@@ -78,3 +78,22 @@ scrollBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+/* ================================
+   SLIDER 
+================================== */
+
+const testimonials = document.querySelectorAll(".testimonial");
+let currentIndex = 0;
+
+document.querySelector(".next").addEventListener("click", () => {
+  testimonials[currentIndex].classList.remove("active");
+  currentIndex = (currentIndex + 1) % testimonials.length;
+  testimonials[currentIndex].classList.add("active");
+});
+
+document.querySelector(".prev").addEventListener("click", () => {
+  testimonials[currentIndex].classList.remove("active");
+  currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+  testimonials[currentIndex].classList.add("active");
+});
