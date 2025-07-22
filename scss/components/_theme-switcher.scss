@@ -70,18 +70,3 @@
     }
   }
 }
-
-/* =============================
-   Mobile position
-============================= */
-.nav__theme {
-  margin-top: var(--spacing-md);
-  justify-content: center;
-  display: none; /* hidden on desktop */
-
-  @include c.respond(mobile) {
-    display: flex; /* show inside burger menu on mobile */
-    justify-content: center;
-    margin-top: var(--spacing-md);
-  }
-}

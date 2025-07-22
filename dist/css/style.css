@@ -853,24 +853,8 @@ ul {
   transform: translateX(26px);
 }
 
-/* =============================
-   Mobile position
-============================= */
-.nav__theme {
-  margin-top: var(--spacing-md);
-  justify-content: center;
-  display: none; /* hidden on desktop */
-}
-@media (max-width: 768px) {
-  .nav__theme {
-    display: flex; /* show inside burger menu on mobile */
-    justify-content: center;
-    margin-top: var(--spacing-md);
-  }
-}
-
 .innovation {
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-lg) 0;
   background: var(--gradient-secondary);
   color: var(--color-text);
   /* Features */
