@@ -114,13 +114,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateSliderPosition() {
-    const visibleSlides = getVisibleSlides();
     const slideWidth = testimonials[0].offsetWidth;
     const gap = parseInt(getComputedStyle(slider).gap) || 0;
     const move = (slideWidth + gap) * currentIndex;
-
     slider.style.transform = `translateX(-${move}px)`;
-
     dots.forEach((dot, i) =>
       dot.classList.toggle("active", i === currentIndex)
     );
@@ -131,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (currentIndex < testimonials.length - visibleSlides) {
       currentIndex++;
     } else {
-      currentIndex = 0; // loop
+      currentIndex = 0;
     }
     updateSliderPosition();
   }
@@ -171,7 +168,10 @@ document.addEventListener("DOMContentLoaded", () => {
   slider.addEventListener("mouseenter", stopAutoplay);
   slider.addEventListener("mouseleave", startAutoplay);
 
-  window.addEventListener("resize", updateSliderPosition);
+  window.addEventListener("resize", () => {
+    updateSliderPosition();
+  });
 
+  updateSliderPosition();
   startAutoplay();
 });

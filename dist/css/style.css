@@ -996,56 +996,36 @@ ul {
 .testimonials {
   padding: var(--spacing-lg) 0;
   background: var(--gradient-primary);
-  text-align: center;
   color: #fff;
-  overflow: hidden;
-  /* ===== Response ===== */
+  text-align: center;
+  position: relative;
+  /* ===== SLIDER WRAPPER ===== */
+  /* ===== SLIDER ===== */
+  /* ===== SLIDE ITEM ===== */
+  /* ===== BUTTONS ===== */
+  /* ===== DOTS ===== */
+  /* ===== RESPONSIVE ===== */
 }
 .testimonials .section-title {
   font-size: 2rem;
   margin-bottom: var(--spacing-md);
 }
+.testimonials .slider-block {
+  position: relative;
+}
 .testimonials .testimonials__slider-wrapper {
   position: relative;
-  display: flex;
-  align-items: center;
   overflow: hidden;
-  padding: 0 50px;
+  width: 100%;
 }
 .testimonials .testimonials__slider {
   display: flex;
   gap: 20px;
   transition: transform 0.5s ease-in-out;
-}
-.testimonials .slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: var(--color-accent);
-  color: #fff;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  z-index: 15;
-  transition: background 0.3s;
-}
-.testimonials .slider-btn:hover {
-  background: var(--color-accent-hover);
-}
-.testimonials .slider-btn.prev {
-  left: 10px;
-}
-.testimonials .slider-btn.next {
-  right: 10px;
+  will-change: transform;
 }
 .testimonials .testimonial {
-  min-width: 100%;
+  flex: 0 0 100%;
   max-width: 100%;
   padding: var(--spacing-md);
   background: rgba(255, 255, 255, 0.1);
@@ -1079,24 +1059,32 @@ ul {
   font-size: 1.2rem;
   color: #ffd700;
 }
-.testimonials .slider-controls {
-  display: flex;
-  justify-content: center;
-  margin-top: var(--spacing-md);
-  gap: 10px;
-}
-.testimonials .slider-controls button {
+.testimonials .slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   background: var(--color-accent);
   color: #fff;
   border: none;
-  padding: 10px 15px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  cursor: pointer;
   font-size: 18px;
-  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s ease;
 }
-.testimonials .slider-controls button:hover {
+.testimonials .slider-btn:hover {
   background: var(--color-accent-hover);
+}
+.testimonials .slider-btn.prev {
+  left: -60px;
+}
+.testimonials .slider-btn.next {
+  right: -60px;
 }
 .testimonials .slider-dots {
   display: flex;
@@ -1117,23 +1105,32 @@ ul {
   background: var(--color-accent);
 }
 @media (max-width: 768px) {
-  .testimonials .testimonials__slider-wrapper {
-    padding: 0 30px;
-  }
   .testimonials .slider-btn {
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     font-size: 14px;
   }
+  .testimonials .slider-btn.prev {
+    left: 0;
+  }
+  .testimonials .slider-btn.next {
+    right: 0;
+  }
   .testimonials .testimonial {
-    min-width: 50%;
-    max-width: 50%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .testimonials .testimonial {
+    flex: 0 0 calc((100% - 20px) / 2);
+    max-width: calc((100% - 20px) / 2);
   }
 }
 @media (min-width: 1200px) {
   .testimonials .testimonial {
-    min-width: 33.33%;
-    max-width: 33.33%;
+    flex: 0 0 calc((100% - 40px) / 3);
+    max-width: calc((100% - 40px) / 3);
   }
 }
 
