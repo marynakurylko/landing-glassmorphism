@@ -32,37 +32,30 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <script
-      src="https://kit.fontawesome.com/a076d05399.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body data-theme="light">
     <!-- HEADER -->
-    <header class="header">
+
+    <header class="header" id="header">
       <div class="container header__container">
         <!-- Logo -->
-        <div class="header__logo"><i class="fas fa-bolt"></i> MyBrand</div>
+        <div class="header__logo">
+          <a href="#hero"><i class="fas fa-bolt"></i> MyBrand</a>
+        </div>
 
         <!-- Navigation -->
         <nav class="header__nav" id="nav-menu">
           <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#about" class="nav__link">About</a>
-            </li>
-            <li class="nav__item">
-              <a href="#services" class="nav__link">Services</a>
-            </li>
-            <li class="nav__item">
-              <a href="#innovations" class="nav__link">Innovations</a>
-            </li>
-            <li class="nav__item">
-              <a href="#contact" class="nav__link">Contact</a>
-            </li>
+            <li><a href="#about" class="nav__link">About</a></li>
+            <li><a href="#services" class="nav__link">Services</a></li>
+            <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
+            <li><a href="#innovations" class="nav__link">Innovations</a></li>
+            <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
           </ul>
 
-          <!-- Theme Switcher inside burger menu (MOBILE) -->
-          <div class="theme-switcher nav__theme">
+          <!-- Theme Switcher (Mobile) -->
+          <div class="theme-switcher mobile">
             <input
               type="checkbox"
               id="theme-toggle-mobile"
@@ -79,21 +72,8 @@
           </div>
         </nav>
 
-        <!-- Burger button -->
-        <button
-          id="burger"
-          class="burger"
-          aria-label="Toggle menu"
-          aria-expanded="false"
-          aria-controls="nav-menu"
-        >
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
-          <span class="burger__line"></span>
-        </button>
-
-        <!-- Theme Switcher desktop -->
-        <div class="theme-switcher">
+        <!-- Theme Switcher (Desktop) -->
+        <div class="theme-switcher desktop">
           <input
             type="checkbox"
             id="theme-toggle"
@@ -108,11 +88,24 @@
             ></span>
           </label>
         </div>
+
+        <!-- Burger button -->
+        <button
+          id="burger"
+          class="burger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
       </div>
     </header>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="hero__decor">
         <div class="decor-circle circle-1"></div>
         <div class="decor-circle circle-2"></div>
@@ -136,36 +129,36 @@
       <div class="container about__container">
         <!-- Left Column -->
         <div class="about__content fade-in">
-          <h2 class="section-title">Про нас</h2>
+          <h2 class="section-title">About Us</h2>
           <p>
-            Ми створюємо сучасні веб-рішення, які допомагають бізнесам
-            розвиватися та досягати нових висот. Наш підхід — поєднання
-            технологій, дизайну та інновацій.
+            We create modern web solutions that help businesses grow and reach
+            new heights. Our approach combines technology, design, and
+            innovation.
           </p>
           <p>
-            Команда професіоналів забезпечує високу якість кожного проєкту, щоб
-            ви отримали найкращий результат.
+            Our professional team ensures top quality for every project, so you
+            get the best results.
           </p>
-          <a href="#contact" class="btn btn--accent">Зв'язатися з нами</a>
+          <a href="#contact" class="btn btn--accent">Contact Us</a>
         </div>
 
         <!-- Right Column: Stats -->
         <div class="about__stats">
           <div class="stat-card fade-in">
             <h3>5000+</h3>
-            <p>Щасливих клієнтів</p>
+            <p>Happy Clients</p>
           </div>
           <div class="stat-card fade-in">
             <h3>100%</h3>
-            <p>Гарантія якості</p>
+            <p>Quality Guarantee</p>
           </div>
           <div class="stat-card fade-in">
             <h3>0</h3>
-            <p>Днів очікування</p>
+            <p>Waiting Days</p>
           </div>
           <div class="stat-card fade-in">
             <h3>∞</h3>
-            <p>Ваш потенціал</p>
+            <p>Your Potential</p>
           </div>
         </div>
       </div>
@@ -198,14 +191,14 @@
     <!-- PORTFOLIO -->
     <section id="portfolio" class="portfolio">
       <div class="container">
-        <h2 class="section-title fade-in">Наші проєкти</h2>
-        <p class="section-subtitle fade-in">Подивіться, що ми вже зробили</p>
+        <h2 class="section-title fade-in">Our Projects</h2>
+        <p class="section-subtitle fade-in">Take a look at what we've done</p>
         <div class="portfolio__grid">
           <div class="portfolio__item fade-in">
             <img src="images/project1.jpg" alt="Project 1" />
             <div class="portfolio__overlay">
               <h3>Web App</h3>
-              <p>Дизайн та розробка</p>
+              <p>Design & Development</p>
             </div>
           </div>
           <div class="portfolio__item fade-in">
@@ -232,10 +225,10 @@
         <!-- Left Content -->
         <div class="innovation__content">
           <h2 class="innovation__title">
-            МИ – <span class="highlight">ПІОНЕРИ ІННОВАЦІЙ</span>
+            WE ARE <span class="highlight">INNOVATION PIONEERS</span>
           </h2>
           <p class="innovation__subtitle">
-            Команда візіонерів, що створює технології завтрашнього дня сьогодні.
+            A visionary team creating tomorrow's technologies today.
           </p>
 
           <div class="innovation__features">
@@ -244,8 +237,10 @@
                 ><i class="fa-solid fa-bolt"></i
               ></span>
               <div>
-                <h4 class="feature__title">Швидкість блискавки</h4>
-                <p class="feature__text">Реалізуємо ідеї за рекордний час</p>
+                <h4 class="feature__title">Lightning Speed</h4>
+                <p class="feature__text">
+                  We bring your ideas to life in record time
+                </p>
               </div>
             </div>
             <div class="feature fade-in">
@@ -253,8 +248,8 @@
                 ><i class="fa-solid fa-arrows-up-down-left-right"></i
               ></span>
               <div>
-                <h4 class="feature__title">Точність снайпера</h4>
-                <p class="feature__text">Кожна деталь має значення</p>
+                <h4 class="feature__title">Sniper Precision</h4>
+                <p class="feature__text">Every detail matters to us</p>
               </div>
             </div>
             <div class="feature fade-in">
@@ -262,8 +257,8 @@
                 ><i class="fa-solid fa-wand-magic-sparkles"></i
               ></span>
               <div>
-                <h4 class="feature__title">Магія інновацій</h4>
-                <p class="feature__text">Перетворюємо мрії в реальність</p>
+                <h4 class="feature__title">Innovation Magic</h4>
+                <p class="feature__text">Turning your dreams into reality</p>
               </div>
             </div>
           </div>
@@ -271,15 +266,19 @@
 
         <!-- Right Stats Card -->
         <div class="innovation__stats fade-in">
-          <div class="stats-card">
-            <span class="stats-card__icon">🏆</span>
-            <h3 class="stats-card__title">№1 В УКРАЇНІ</h3>
-            <ul class="stats-list">
-              <li><strong>1000+</strong> Проектів</li>
-              <li><strong>99.9%</strong> Успіх</li>
-              <li><strong>24/7</strong> Підтримка</li>
-              <li><strong>∞</strong> Можливості</li>
-            </ul>
+          <div class="innovations">
+            <div class="scene">
+              <div class="glass-panel"></div>
+              <img
+                src="images/innovations/lightbulb.png"
+                alt="Illustration of purple light bulb"
+                class="lamp-image"
+              />
+              <div class="sphere sphere1"></div>
+              <div class="sphere sphere2"></div>
+              <div class="sphere sphere3"></div>
+              <div class="torus"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -288,67 +287,72 @@
     <!-- TESTIMONIALS -->
     <section id="testimonials" class="testimonials">
       <div class="container">
-        <h2 class="section-title fade-in">Відгуки клієнтів</h2>
-        <div class="testimonials__slider-wrapper">
+        <h2 class="section-title fade-in">Client Testimonials</h2>
+        <div class="slider-block">
           <button class="slider-btn prev">
             <i class="fa-solid fa-chevron-left"></i>
           </button>
-
-          <div class="testimonials__slider">
-            <div class="testimonial">
-              <img src="images/client1.jpg" alt="Client 1" />
-              <h3>Ірина К.</h3>
-              <p class="role">CEO, TechCorp</p>
-              <p class="text">
-                "Це була найкраща співпраця! Сайт вийшов ідеальним!"
-              </p>
-              <div class="stars">⭐⭐⭐⭐⭐</div>
-            </div>
-            <div class="testimonial">
-              <img src="images/client2.jpg" alt="Client 2" />
-              <h3>Олександр П.</h3>
-              <p class="role">Маркетолог</p>
-              <p class="text">"Вони перевершили всі наші очікування!"</p>
-              <div class="stars">⭐⭐⭐⭐⭐</div>
-            </div>
-            <div class="testimonial">
-              <img src="images/client3.jpg" alt="Client 3" />
-              <h3>Марія С.</h3>
-              <p class="role">Startup Founder</p>
-              <p class="text">"Команда зробила все швидко і якісно!"</p>
-              <div class="stars">⭐⭐⭐⭐⭐</div>
-            </div>
-            <div class="testimonial">
-              <img src="images/client1.jpg" alt="Client 1" />
-              <h3>Ірина К.</h3>
-              <p class="role">CEO, TechCorp</p>
-              <p class="text">
-                "Це була найкраща співпраця! Сайт вийшов ідеальним!"
-              </p>
-              <div class="stars">⭐⭐⭐⭐⭐</div>
-            </div>
-            <div class="testimonial">
-              <img src="images/client2.jpg" alt="Client 2" />
-              <h3>Олександр П.</h3>
-              <p class="role">Маркетолог</p>
-              <p class="text">"Вони перевершили всі наші очікування!"</p>
-              <div class="stars">⭐⭐⭐⭐⭐</div>
-            </div>
-            <div class="testimonial">
-              <img src="images/client3.jpg" alt="Client 3" />
-              <h3>Марія С.</h3>
-              <p class="role">Startup Founder</p>
-              <p class="text">"Команда зробила все швидко і якісно!"</p>
-              <div class="stars">⭐⭐⭐⭐⭐</div>
+          <div class="testimonials__slider-wrapper">
+            <div class="testimonials__slider">
+              <div class="testimonial">
+                <img src="images/avatars/client1.jpg" alt="Client 1" />
+                <h3>Iryna K.</h3>
+                <p class="role">CEO, TechCorp</p>
+                <p class="text">
+                  "This was the best collaboration ever! The site turned out
+                  perfect!"
+                </p>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+              </div>
+              <div class="testimonial">
+                <img src="images/avatars/client2.jpg" alt="Client 2" />
+                <h3>Oleksandr P.</h3>
+                <p class="role">Marketer</p>
+                <p class="text">"They exceeded all our expectations!"</p>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+              </div>
+              <div class="testimonial">
+                <img src="images/avatars/client3.jpg" alt="Client 3" />
+                <h3>Mariya S.</h3>
+                <p class="role">Startup Founder</p>
+                <p class="text">
+                  "The team delivered quickly and with quality!"
+                </p>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+              </div>
+              <div class="testimonial">
+                <img src="images/avatars/client1.jpg" alt="Client 1" />
+                <h3>Iryna K.</h3>
+                <p class="role">CEO, TechCorp</p>
+                <p class="text">
+                  "This was the best collaboration ever! The site turned out
+                  perfect!"
+                </p>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+              </div>
+              <div class="testimonial">
+                <img src="images/avatars/client2.jpg" alt="Client 2" />
+                <h3>Oleksandr P.</h3>
+                <p class="role">Marketer</p>
+                <p class="text">"They exceeded all our expectations!"</p>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+              </div>
+              <div class="testimonial">
+                <img src="images/avatars/client3.jpg" alt="Client 3" />
+                <h3>Mariya S.</h3>
+                <p class="role">Startup Founder</p>
+                <p class="text">
+                  "The team delivered quickly and with quality!"
+                </p>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+              </div>
+              <!-- other cards -->
             </div>
           </div>
-
           <button class="slider-btn next">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
         </div>
-
-        <!-- Bullets -->
         <div class="slider-dots"></div>
       </div>
     </section>
@@ -387,8 +391,10 @@
       <div class="container footer__container">
         <!-- Logo & About -->
         <div class="footer__col footer__about fade-in">
-          <h3 class="footer__logo"><i class="fas fa-bolt"></i> MyBrand</h3>
-          <p>Створюємо майбутнє разом з вами. Кожен день. Кожен проєкт.</p>
+          <h3 class="footer__logo">
+            <a href="#hero"><i class="fas fa-bolt"></i> MyBrand</a>
+          </h3>
+          <p>Creating the future with you. Every day. Every project.</p>
         </div>
 
         <!-- Services -->
@@ -407,6 +413,7 @@
           <ul>
             <li><a href="#about">About Us</a></li>
             <li><a href="#innovations">Innovations</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
           </ul>
         </div>
 
@@ -445,7 +452,7 @@
       </div>
 
       <div class="footer__bottom">
-        <p>© 2025 MyBrand. Майбутнє починається тут.</p>
+        <p>© 2025 MyBrand. The future starts here.</p>
       </div>
     </footer>
 
