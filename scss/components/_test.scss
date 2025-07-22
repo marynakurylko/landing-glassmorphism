@@ -1,0 +1,201 @@
+@use "../core" as c;
+
+/* === Animations for floating elements === */
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(3deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes float-alt {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+/* === Innovations Section Wrapper === */
+.innovations {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius);
+
+  .scene {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+  }
+}
+
+/* === Glass Panel === */
+.glass-panel {
+  position: absolute;
+  top: 20%;
+  left: 27%;
+  width: 200px;
+  height: 250px;
+  @include c.glass(15px, rgba(255, 255, 255, 0.1));
+  border-radius: 40px;
+  z-index: 2;
+  animation: float 10s ease-in-out infinite;
+  box-shadow: var(--shadow-card);
+}
+
+/* === Lamp Image === */
+.lamp-image {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 210px;
+  height: auto;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.2));
+  z-index: 3;
+  animation: float 10s ease-in-out infinite;
+}
+
+/* === Colorful Spheres === */
+.sphere {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+  &.sphere1 {
+    width: 60px;
+    height: 60px;
+    top: 15%;
+    left: 10%;
+    background: radial-gradient(circle at 30% 30%, #a0f0c9, #6dd4f5);
+    z-index: 1;
+    animation: float-alt 8s ease-in-out infinite 0.5s;
+  }
+
+  &.sphere2 {
+    width: 90px;
+    height: 90px;
+    top: 25%;
+    right: -5%;
+    background: radial-gradient(circle at 30% 30%, #ffd972, #ff8c69);
+    z-index: 4;
+    animation: float 9s ease-in-out infinite;
+  }
+
+  &.sphere3 {
+    width: 80px;
+    height: 80px;
+    bottom: 10%;
+    left: 5%;
+    background: radial-gradient(circle at 70% 70%, #ff8c69, #e869a8);
+    z-index: 4;
+    animation: float-alt 11s ease-in-out infinite 1s;
+  }
+}
+
+/* === Torus Shape === */
+.torus {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  bottom: 5%;
+  right: 10%;
+  border-radius: 50%;
+  background: conic-gradient(from 180deg, #ffc947, #f76e79, #c166f1, #ffc947);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  animation: float-alt 12s ease-in-out infinite;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 1024px) {
+  .innovations {
+    width: 350px;
+    height: 350px;
+  }
+  .lamp-image {
+    width: 180px;
+  }
+  .glass-panel {
+    width: 180px;
+    height: 220px;
+  }
+  .sphere.sphere2 {
+    width: 75px;
+    height: 75px;
+    right: 0;
+  }
+  .torus {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .innovations {
+    width: 280px;
+    height: 280px;
+    margin: 30px auto;
+  }
+  .lamp-image {
+    width: 150px;
+  }
+  .glass-panel {
+    width: 150px;
+    height: 180px;
+  }
+  .sphere.sphere1 {
+    width: 45px;
+    height: 45px;
+  }
+  .sphere.sphere2 {
+    width: 60px;
+    height: 60px;
+  }
+  .sphere.sphere3 {
+    width: 60px;
+    height: 60px;
+  }
+  .torus {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .innovations {
+    width: 230px;
+    height: 230px;
+  }
+  .lamp-image {
+    width: 120px;
+  }
+  .glass-panel {
+    width: 130px;
+    height: 160px;
+  }
+  .sphere.sphere1,
+  .sphere.sphere2,
+  .sphere.sphere3 {
+    width: 45px;
+    height: 45px;
+  }
+  .torus {
+    width: 80px;
+    height: 80px;
+  }
+}

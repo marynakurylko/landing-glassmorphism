@@ -2,14 +2,15 @@
 
 .testimonials {
   padding: var(--spacing-lg) 0;
-  background: var(--gradient-primary);
-  color: #fff;
+  // background: var(--gradient-primary);
+  color: var(--color-text);
   text-align: center;
   position: relative;
 
   .section-title {
     font-size: 2rem;
     margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
   }
 
   .slider-block {
@@ -18,8 +19,8 @@
 
   /* ===== SLIDER WRAPPER ===== */
   .testimonials__slider-wrapper {
-    position: relative; // для кнопок
-    overflow: hidden; // обрізає зайві слайди
+    position: relative;
+    overflow: hidden;
     width: 100%;
   }
 
@@ -33,10 +34,10 @@
 
   /* ===== SLIDE ITEM ===== */
   .testimonial {
-    flex: 0 0 100%; // мобільна версія
+    flex: 0 0 100%;
     max-width: 100%;
     padding: var(--spacing-md);
-    @include c.glass(15px, rgba(255, 255, 255, 0.1));
+    @include c.glass(15px, rgba(155, 92, 255, 0.2));
     border-radius: var(--radius);
     text-align: center;
 
@@ -114,7 +115,7 @@
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.5);
+      background: var(--color-gray);
       border: none;
       cursor: pointer;
       transition: background 0.3s ease;
