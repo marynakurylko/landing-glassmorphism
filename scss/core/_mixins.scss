@@ -39,6 +39,10 @@
     @media (max-width: 1024px) {
       @content;
     }
+  } @else if $breakpoint == desktop or $breakpoint == xl {
+    @media (min-width: 1025px) {
+      @content;
+    }
   }
 }
 

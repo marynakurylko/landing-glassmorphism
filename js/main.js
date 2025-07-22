@@ -1,21 +1,28 @@
 /* ================================
    BURGER MENU TOGGLE
 ================================== */
-
 const burger = document.getElementById("burger");
-const navMenu = document.getElementById("nav-menu");
+const header = document.getElementById("header");
+const body = document.body;
 
 burger.addEventListener("click", () => {
-  const isOpen = navMenu.classList.toggle("active");
+  const isOpen = header.classList.toggle("menu-open");
   burger.classList.toggle("active");
   burger.setAttribute("aria-expanded", isOpen);
+
+  if (isOpen) {
+    body.classList.add("no-scroll");
+  } else {
+    body.classList.remove("no-scroll");
+  }
 });
 
 document.querySelectorAll(".nav__link").forEach((link) => {
   link.addEventListener("click", () => {
-    navMenu.classList.remove("active");
+    header.classList.remove("menu-open");
     burger.classList.remove("active");
     burger.setAttribute("aria-expanded", false);
+    body.classList.remove("no-scroll");
   });
 });
 
@@ -23,21 +30,11 @@ document.querySelectorAll(".nav__link").forEach((link) => {
    PROGRESS BAR ON SCROLL
 ================================== */
 
-const progressBar = document.createElement("div");
-progressBar.style.position = "fixed";
-progressBar.style.top = "0";
-progressBar.style.left = "0";
-progressBar.style.height = "4px";
-progressBar.style.background = "linear-gradient(90deg, #9b5cff, #ff4f81)";
-progressBar.style.width = "0";
-progressBar.style.zIndex = "9999";
-document.body.appendChild(progressBar);
-
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY;
   const docHeight = document.body.scrollHeight - window.innerHeight;
   const progress = (scrollTop / docHeight) * 100;
-  progressBar.style.width = progress + "%";
+  header.style.setProperty("--progress-width", progress + "%");
 });
 
 /* ================================
