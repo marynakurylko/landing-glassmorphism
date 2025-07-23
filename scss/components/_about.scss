@@ -5,19 +5,14 @@
   background: var(--color-bg);
   color: var(--color-text-dark);
 
-  .about__container {
+  &__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-lg);
     align-items: center;
-
-    @include c.respond(mobile) {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
   }
 
-  .about__content {
+  &__content {
     .section-title {
       font-size: 2.5rem;
       color: var(--color-primary);
@@ -34,22 +29,18 @@
     }
   }
 
-  .about__stats {
+  &__stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--spacing-md);
-
-    @include c.respond(sm) {
-      grid-template-columns: 1fr;
-    }
 
     .stat-card {
       position: relative;
       padding: var(--spacing-md);
       border-radius: var(--radius-lg);
       text-align: center;
-      backdrop-filter: blur(10px);
       overflow: hidden;
+      @include c.glass(10px, rgba(255, 255, 255, 0.05));
 
       h3 {
         font-size: 2rem;
@@ -80,7 +71,6 @@
         );
         background-size: 400%;
         animation: border-move 6s linear infinite;
-
         -webkit-mask: linear-gradient(#fff 0 0) content-box,
           linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor;
@@ -95,7 +85,6 @@
         background: rgba(0, 0, 0, 0.1);
         border-radius: inherit;
         z-index: 1;
-        @include c.glass(10px, rgba(255, 255, 255, 0.05));
       }
 
       * {
@@ -114,6 +103,53 @@
     }
     100% {
       background-position: 0% 50%;
+    }
+  }
+
+  // --- Responsive ---
+  @include c.respond(lg) {
+    &__container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    &__content {
+      .section-title {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    &__stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include c.respond(md) {
+    padding: var(--spacing-md) 0;
+
+    &__stats {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @include c.respond(sm) {
+    .section-title {
+      font-size: 1.75rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+    &__container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    &__stats {
+      grid-template-columns: 1fr;
     }
   }
 }
