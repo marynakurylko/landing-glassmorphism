@@ -41,7 +41,7 @@ A **modern, responsive, and animated landing page** template built with **HTML5,
 ## Project Structure
 
 ```
-nexus-landing/
+landing-glassmorphism/
 │
 ├── index.html
 ├── /css
@@ -121,7 +121,7 @@ npm run build
 
 ---
 
-## 📜 License
+##  License
 
 MIT License – free for personal use.
 
