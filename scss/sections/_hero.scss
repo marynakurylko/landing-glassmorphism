@@ -10,12 +10,11 @@
   padding: var(--spacing-lg) var(--spacing-sm);
   background: var(--gradient-primary);
   color: var(--color-text);
-
-  // Parallax
   transform: translate(var(--parallax-x, 0), var(--parallax-y, 0));
   transition: transform 0.2s ease-out;
 
-  .hero__content {
+  // --- Hero content ---
+  &__content {
     position: relative;
     z-index: 2;
     max-width: 700px;
@@ -27,7 +26,7 @@
 
       .highlight {
         color: var(--color-accent);
-        text-shadow: 0 0 15px rgba(255, 79, 129, 0.7); // прямий колір, залишаю
+        text-shadow: 0 0 15px rgba(255, 79, 129, 0.7);
       }
     }
 
@@ -37,19 +36,15 @@
     }
 
     .hero__buttons {
-      display: flex;
-      justify-content: center;
+      @include c.flex-center;
       gap: var(--spacing-sm);
     }
   }
 
-  // Circles
+  // --- Decorative circles ---
   &__decor {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     z-index: 1;
     pointer-events: none;
 
@@ -59,18 +54,15 @@
       filter: blur(11px);
       opacity: 0.6;
       animation: floatAnim 4s ease-in-out infinite alternate;
-
-      @include c.glass(10px, rgba(255, 255, 255, 0.05)); // залишаю як є, немає css-змінної
+      @include c.glass(10px, rgba(255, 255, 255, 0.05));
     }
 
     .circle-1 {
       width: 600px;
       height: 600px;
       background: var(--gradient-circle1);
-
       top: -100px;
       left: -150px;
-      animation-delay: 0s;
     }
 
     .circle-2 {
@@ -79,7 +71,6 @@
       background: var(--gradient-circle2);
       bottom: -100px;
       right: -75px;
-      animation-delay: 0s;
     }
 
     .circle-3 {
@@ -98,6 +89,52 @@
     }
     100% {
       transform: translate(50px, 50px) scale(1.1);
+    }
+  }
+
+  // --- Responsive ---
+  @include c.respond(lg) {
+    &__content {
+      max-width: 600px;
+
+      .hero__title {
+        font-size: 2.5rem;
+      }
+
+      .hero__subtitle {
+        font-size: 1.15rem;
+      }
+    }
+  }
+
+  @include c.respond(md) {
+    padding: var(--spacing-md) var(--spacing-sm);
+
+    &__content {
+      .hero__title {
+        font-size: 2rem;
+      }
+
+      .hero__subtitle {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @include c.respond(sm) {
+    &__content {
+      .hero__title {
+        font-size: 1.75rem;
+      }
+
+      .hero__subtitle {
+        font-size: 0.9rem;
+      }
+
+      .hero__buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+      }
     }
   }
 }

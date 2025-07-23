@@ -5,6 +5,7 @@
   background: var(--color-bg);
   text-align: center;
 
+  // --- Section title & subtitle ---
   .section-title {
     font-size: 2rem;
     margin-bottom: var(--spacing-sm);
@@ -16,7 +17,8 @@
     color: var(--color-gray);
   }
 
-  .portfolio__grid {
+  // --- Portfolio grid ---
+  &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--spacing-md);
@@ -39,17 +41,12 @@
       }
 
       .portfolio__overlay {
+        @include c.flex-center;
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        inset: 0;
         background: rgba(0, 0, 0, 0.4);
         color: #fff;
-        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
         opacity: 0;
         transition: opacity 0.3s ease;
       }
@@ -62,6 +59,41 @@
           opacity: 1;
         }
       }
+    }
+  }
+
+  // --- Responsive ---
+  @include c.respond(lg) {
+    .section-title {
+      font-size: 1.8rem;
+    }
+    .portfolio__grid {
+      gap: var(--spacing-sm);
+    }
+  }
+
+  @include c.respond(md) {
+    padding: var(--spacing-md) 0;
+
+    .section-title {
+      font-size: 1.6rem;
+    }
+
+    .portfolio__grid {
+      grid-template-columns: 1fr;
+      img {
+        height: 200px;
+      }
+    }
+  }
+
+  @include c.respond(sm) {
+    .section-title {
+      font-size: 1.4rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
     }
   }
 }

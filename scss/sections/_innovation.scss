@@ -8,12 +8,6 @@
   &__container {
     @include c.flex-center;
     gap: var(--spacing-xl);
-
-    @include c.respond(mobile) {
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-    }
   }
 
   &__title {
@@ -34,10 +28,9 @@
     color: var(--color-gray);
   }
 
-  /* Features */
+  // --- Features list ---
   &__features {
-    display: flex;
-    flex-direction: column;
+    @include c.flex-column;
     gap: var(--spacing-md);
 
     .feature {
@@ -46,7 +39,6 @@
       @include c.glass(15px);
       padding: var(--spacing-sm) var(--spacing-md);
       border-radius: var(--radius-lg);
-      backdrop-filter: blur(10px);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
 
       &:hover {
@@ -61,7 +53,6 @@
       &__title {
         font-size: 1.125rem;
         font-weight: 600;
-        color: var(--color-text);
       }
 
       &__text {
@@ -71,7 +62,7 @@
     }
   }
 
-  /* Stats Card */
+  // --- Stats card ---
   &__stats {
     .stats-card {
       @include c.glass(15px);
@@ -79,12 +70,10 @@
       border-radius: var(--radius-xl);
       text-align: center;
       box-shadow: var(--shadow-hover-purple);
-      backdrop-filter: blur(10px);
       max-width: 320px;
 
       &__icon {
         font-size: 3rem;
-        display: block;
         margin-bottom: var(--spacing-sm);
       }
 
@@ -105,9 +94,69 @@
 
           strong {
             font-size: 1.2rem;
-            color: var(--color-text);
           }
         }
+      }
+    }
+  }
+
+  // --- Responsive ---
+  @include c.respond(lg) {
+    &__container {
+      flex-direction: column;
+      text-align: center;
+      gap: var(--spacing-lg);
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+
+  @include c.respond(md) {
+    padding: var(--spacing-md) 0;
+
+    &__container {
+      flex-direction: column;
+      text-align: center;
+      gap: var(--spacing-lg);
+    }
+
+    &__features {
+      .feature {
+        padding: var(--spacing-xs) var(--spacing-sm);
+
+        &__title {
+          font-size: 1rem;
+        }
+
+        &__text {
+          font-size: 0.85rem;
+        }
+      }
+    }
+  }
+
+  @include c.respond(sm) {
+    &__title {
+      font-size: 1.75rem;
+    }
+
+    &__subtitle {
+      font-size: 0.9rem;
+    }
+
+    &__container {
+      flex-direction: column;
+      text-align: center;
+      gap: var(--spacing-lg);
+    }
+
+    .stats-card {
+      padding: var(--spacing-md);
+
+      &__title {
+        font-size: 1.5rem;
       }
     }
   }
